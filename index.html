@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sushank Kumar Singh | Portfolio Matrix</title>
+  <title>Sushank Kumar Singh | Executive Portfolio</title>
 
   <style>
     /* Reset and Core Layout */
@@ -19,16 +17,47 @@
     }
 
     body {
-      background-color: #051412; /* Deep Shadow Jade Base */
-      color: #F3F4F6; /* Brilliant Ice Main Text */
+      background-color: #F1F5F9; 
+      /* Subtle Architectural Grid Texture - Eye catching but minimal */
+      background-image: 
+        linear-gradient(rgba(197, 168, 128, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(197, 168, 128, 0.03) 1px, transparent 1px);
+      background-size: 30px 30px;
+      color: #0F172A; /* Midnight Slate Charcoal Typography */
       line-height: 1.7;
-      background-image: radial-gradient(circle at 80% 20%, rgba(0, 255, 163, 0.06) 0%, transparent 50%),
-                        radial-gradient(circle at 20% 80%, rgba(209, 213, 219, 0.03) 0%, transparent 50%);
+    }
+
+    /* Fixed Premium Navigation */
+    nav {
+      background: rgba(241, 245, 249, 0.9); 
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(197, 168, 128, 0.2); 
+    }
+
+    nav a {
+      color: #475569; 
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #C5A880; /* Muted Champagne Gold Hover */
     }
 
     /* Premium Header / Hero Section */
     header {
-      padding: 100px 20px 60px 20px;
+      padding: 120px 20px 60px 20px;
       text-align: center;
       position: relative;
     }
@@ -37,68 +66,37 @@
       font-size: 3rem;
       font-weight: 700;
       letter-spacing: 2px;
-      color: #F3F4F6; /* Brilliant Ice */
-      margin-bottom: 10px;
+      color: #0F172A; 
+      margin-bottom: 15px;
       text-transform: uppercase;
     }
 
     header h1 span {
-      color: #00FFA3; /* Electric Mint/Chrome Accent */
-      text-shadow: 0 0 20px rgba(0, 255, 163, 0.4);
+      color: #C5A880; /* Muted Champagne Gold */
     }
 
     header p {
-      font-size: 1.2rem;
-      color: #7A8A87; /* Frosted Sage Muted Text */
+      font-size: 1.1rem;
+      color: #475569; 
       letter-spacing: 4px;
       text-transform: uppercase;
-      font-weight: 300;
+      font-weight: 400;
     }
 
-    /* Fixed Premium Navigation */
-    nav {
-      background: rgba(5, 20, 18, 0.9); /* Translucent Shadow Jade */
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding: 20px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid rgba(0, 255, 163, 0.25); /* Electric Mint Border Touch */
-    }
-
-    nav a {
-      color: #D1D5DB; /* Polished Platinum */
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #00FFA3; /* Electric Mint Toggle */
-      text-shadow: 0 0 10px rgba(0, 255, 163, 0.6);
-    }
-
-    /* Luxury Content Sections */
+    /* Stretched Luxury Content Sections (No Background Fills) */
     section {
-      padding: 50px 40px;
-      max-width: 950px;
+      padding: 40px 0px;
+      max-width: 1100px; /* Stretched wide layout for strong emphasis */
       margin: 40px auto;
-      background: rgba(255, 255, 255, 0.02); /* Translucent Emerald Card Background */
-      border: 1px solid rgba(255, 255, 255, 0.05); 
-      border-radius: 16px;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      border-bottom: 1px solid rgba(197, 168, 128, 0.15); /* Elegant separator line */
+    }
+
+    #contact {
+      border-bottom: none;
     }
 
     h2 {
-      color: #F3F4F6; /* Brilliant Ice */
+      color: #0F172A; 
       font-size: 1.8rem;
       font-weight: 600;
       letter-spacing: 1.5px;
@@ -108,30 +106,29 @@
       position: relative;
     }
 
-    /* Mint highlight bar under headings */
+    /* Champagne highlight bar under headings */
     h2::after {
       content: '';
       display: block;
       width: 40px;
       height: 3px;
-      background: #00FFA3; /* Electric Mint */
+      background: #C5A880; 
       margin-top: 8px;
       border-radius: 2px;
-      box-shadow: 0 0 10px rgba(0, 255, 163, 0.5);
     }
 
     p {
-      color: #7A8A87; /* Frosted Sage Muted Text */
+      color: #334155; 
       margin-bottom: 15px;
       font-size: 1.05rem;
     }
 
     strong {
-      color: #F3F4F6; /* Brilliant Ice for bold highlights */
+      color: #0F172A; 
       font-weight: 600;
     }
 
-    /* Profile Layout inside Philosophy Section */
+    /* Profile Layout */
     .profile-container {
       display: flex;
       align-items: center;
@@ -144,10 +141,10 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      border: 3px solid #00FFA3; /* Electric Mint Frame */
-      box-shadow: 0 0 25px rgba(0, 255, 163, 0.4);
+      border: 3px solid #C5A880; 
       overflow: hidden;
-      background-color: rgba(5, 20, 18, 0.8);
+      background-color: #FFFFFF;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     }
 
     .profile-frame img {
@@ -157,11 +154,7 @@
       display: block;
     }
 
-    .profile-text {
-      flex-grow: 1;
-    }
-
-    /* Custom Grid Layout for Premium Presentation */
+    /* Custom Inner Grid Layout (Stretched Layout) */
     .grid-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -170,91 +163,167 @@
     }
 
     .grid-box {
-      background: rgba(255, 255, 255, 0.005); 
-      border: 1px solid rgba(0, 255, 163, 0.15); /* Subtly bordered with Electric Mint */
-      padding: 20px;
-      border-radius: 8px;
+      background: #FFFFFF; /* Stretched data panels */
+      border: 1px solid rgba(197, 168, 128, 0.2); 
+      padding: 30px; 
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02); 
     }
 
     .grid-box strong {
-      color: #00FFA3; /* Accented box title text */
+      color: #C5A880; 
+      display: block;
+      margin-bottom: 8px;
     }
 
-    /* Sleek Lists */
+    /* Sleek Bulleted Lists */
     ul {
       list-style-type: none;
     }
 
     li {
-      color: #7A8A87; /* Frosted Sage */
+      color: #334155; 
       margin-bottom: 12px;
       position: relative;
       padding-left: 20px;
     }
 
-    /* Electric Mint Bullet Points */
     li::before {
       content: "✦";
-      color: #00FFA3;
+      color: #C5A880;
       position: absolute;
       left: 0;
       top: 0;
-      text-shadow: 0 0 5px rgba(0, 255, 163, 0.8);
     }
 
-    /* Photo Gallery Layout */
+    /* Dashboard Metrics Wrapper */
+    .metrics-dashboard {
+      display: grid;
+      grid-template-columns: 1.8fr 1.2fr;
+      gap: 25px;
+      margin: 25px 0 35px 0;
+    }
+
+    /* Achievement Grid Layout */
+    .achievement-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .achievement-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(197, 168, 128, 0.2);
+      border-left: 4px solid #C5A880;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+    }
+
+    .achievement-card .badge {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #64748B;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .achievement-card .title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0F172A;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      line-height: 1.3;
+    }
+
+    /* Small Vitals Column Layout */
+    .vitals-column {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .vital-box {
+      background: #FFFFFF;
+      border: 1px solid rgba(197, 168, 128, 0.15);
+      border-radius: 8px;
+      padding: 14px 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .vital-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #64748B;
+      font-weight: 600;
+    }
+
+    .vital-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0F172A;
+    }
+
+    .vital-value.position-text {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #C5A880;
+    }
+
+    /* Gallery Component Layout */
     .gallery-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+      gap: 25px;
       margin-top: 25px;
     }
 
     .gallery-item {
-      background: rgba(5, 20, 18, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 8px;
+      background: #FFFFFF;
+      border: 1px solid rgba(197, 168, 128, 0.2);
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-      transition: transform 0.3s ease, border-color 0.3s ease;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+      transition: transform 0.3s ease;
     }
 
     .gallery-item:hover {
       transform: translateY(-5px);
-      border-color: #00FFA3; /* Bright Mint Border on hover */
-      box-shadow: 0 15px 30px rgba(0, 255, 163, 0.15);
+      border-color: #C5A880; 
     }
 
     .gallery-item img {
       width: 100%;
-      height: 220px;
+      height: 240px; 
       object-fit: cover;
       display: block;
-      opacity: 0.75;
-      transition: opacity 0.3s ease;
-    }
-
-    .gallery-item:hover img {
-      opacity: 1;
     }
 
     .gallery-caption {
-      padding: 12px;
-      font-size: 0.9rem;
-      color: #F3F4F6;
+      padding: 15px;
+      font-size: 0.95rem;
+      color: #0F172A;
       text-align: center;
-      background: rgba(5, 20, 18, 0.9);
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      background: #FFFFFF;
+      border-top: 1px solid rgba(197, 168, 128, 0.15);
     }
 
-    /* Premium Button Style */
+    /* Executive Call-To-Action Button */
     .btn {
       display: inline-block;
-      margin-top: 25px;
-      padding: 12px 30px;
+      margin-top: 35px;
+      padding: 14px 40px;
       background: transparent;
-      color: #00FFA3; /* Electric Mint */
-      border: 2px solid #00FFA3;
+      color: #C5A880; 
+      border: 2px solid #C5A880;
       text-decoration: none;
       border-radius: 4px;
       font-weight: 600;
@@ -265,25 +334,36 @@
     }
 
     .btn:hover {
-      background: #00FFA3;
-      color: #051412; /* Interchanges text to Deep Shadow Jade on hover */
-      box-shadow: 0 0 25px rgba(0, 255, 163, 0.6);
+      background: #C5A880;
+      color: #FFFFFF; 
       cursor: pointer;
     }
 
-    /* Footer */
+    /* Footer Layout */
     footer {
       text-align: center;
-      padding: 40px 20px;
-      background: #020a09; /* Deepest Jade Shadow Void */
-      color: #7A8A87;
-      margin-top: 40px;
-      border-top: 1px solid rgba(0, 255, 163, 0.2);
+      padding: 60px 20px;
+      background: #FFFFFF; 
+      color: #64748B;
+      border-top: 1px solid rgba(197, 168, 128, 0.15);
       font-size: 0.85rem;
       letter-spacing: 1px;
     }
 
-    /* Responsive Design */
+    /* Responsive Design Optimization */
+    @media (max-width: 1150px) {
+      section {
+        margin: 40px 30px;
+      }
+    }
+
+    @media (max-width: 950px) {
+      .metrics-dashboard {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
     @media (max-width: 768px) {
       .profile-container {
         flex-direction: column;
@@ -293,25 +373,28 @@
       .grid-container {
         grid-template-columns: 1fr;
       }
+      .achievement-grid {
+        grid-template-columns: 1fr;
+      }
       header h1 {
         font-size: 2.2rem;
       }
       nav a {
         display: block;
-        margin: 10px 0;
+        margin: 12px 0;
+      }
+      section {
+        padding: 30px 0px;
       }
     }
-  </style>
-</head>
-
-<body>
+  </style></head><body>
 
   <header>
     <h1>Sushank Kumar <span>Singh</span></h1>
     <p>The Intersection of Athletic Grit & Intelligence</p>
   </header>
 
-  <nav>
+  <nav aria-label="Main Navigation">
     <a href="#about">Philosophy</a>
     <a href="#basketball">Athletics</a>
     <a href="#highlights">Game Highlights</a>
@@ -320,127 +403,168 @@
     <a href="#contact">Connect</a>
   </nav>
 
-  <section id="about">
-    <h2>The Philosophy</h2>
-    
-    <div class="profile-container">
-      <div class="profile-frame">
-        <img src="https://via.placeholder.com/180" alt="Sushank Kumar Singh Profile Image">
+  <main>
+    <section id="about">
+      <h2>The Philosophy</h2>
+      <div class="profile-container">
+        <div class="profile-frame">
+          <img src="https://via.placeholder.com/180" alt="Sushank Kumar Singh Profile Image">
+        </div>
+        <div class="profile-text">
+          <p>
+            True masterclass demands precision both on the court and inside the terminal. As a student-athlete focusing on <strong>Computer Science and Artificial Intelligence</strong>, I approach building neural networks with the same tactical mindset required to break down an opponent's defense.
+          </p>
+          <p>
+            My vision is to bridge the physical intuition of competitive basketball with high-compute intelligence, building cutting-edge web environments and machine learning frameworks.
+          </p>
+        </div>
       </div>
-      <div class="profile-text">
-        <p>
-          True masterclass demands precision both on the court and inside the terminal. As a student-athlete focusing on <strong>Computer Science and Artificial Intelligence</strong>, I approach building neural networks with the same tactical mindset required to break down an opponent's defense.
-        </p>
-        <p>
-          My vision is to bridge the physical intuition of competitive basketball with high-compute intelligence, building cutting-edge web environments and machine learning frameworks.
-        </p>
-      </div>
-    </div>
-    
-    <div class="grid-box" style="border-left: 3px solid #00FFA3;">
-      <strong>Academic Excellence & Benchmarks</strong>
-      <p style="margin-top: 5px;">Maintaining rigorous discipline within high-tier academic programs:</p>
-      <ul>
-        <li>Current Cumulative GPA: <strong>3.3</strong></li>
-        <li>Active Nature Club Enrollment & Eco-Sustainable Leadership Track</li>
-        <li>Top Tier School Academic Honor Roll / Achievements</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="basketball">
-    <h2>Athletic Execution</h2>
-    <p>
-      Driven by competitive instinct and refined by relentless training. Basketball is more than a sport—it is an exercise in elite communication, split-second execution, and high-pressure strategy.
-    </p>
-    <div class="grid-container">
-      <div class="grid-box">
-        <strong>Court Leadership</strong>
-        <p>Directing on-court offensive strategies and managing tempo during high-stakes game variations.</p>
-      </div>
-      <div class="grid-box">
-        <strong>Elite Metrics</strong>
-        <p>Combining rigorous daily endurance regimes with precision multi-position spatial tracking.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="highlights">
-    <h2>Game Highlights</h2>
-    <p>Visual logs highlighting court performance, competitive execution, and dynamic team dynamics.</p>
-    
-    <div class="gallery-container">
-      <div class="gallery-item">
-        <img src="https://via.placeholder.com/600x400" alt="Sushank on Court">
-        <div class="gallery-caption">Game Action Drop-step</div>
-      </div>
-      
-      <div class="gallery-item">
-        <img src="https://via.placeholder.com/600x400" alt="Team Formation">
-        <div class="gallery-caption">Strategic Execution & Team Play</div>
-      </div>
-      
-      <div class="gallery-item">
-        <img src="https://via.placeholder.com/600x400" alt="Pre-game warmups">
-        <div class="gallery-caption">Relentless Training & Conditioning</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Core Disciplines</h2>
-    <div class="grid-container">
-      <div>
-        <strong>Computational & AI Architecture</strong>
-        <p style="margin-top: 10px;"></p>
+       
+      <div class="grid-box" style="border-left: 4px solid #C5A880;">
+        <strong>Academic Excellence & Benchmarks</strong>
+        <p style="margin-top: 5px;">Maintaining rigorous discipline within high-tier academic programs:</p>
         <ul>
-          <li>Deep Learning & Predictive Frameworks</li>
-          <li>Advanced Systems Optimization</li>
-          <li>Modern UI/UX Design (HTML5, CSS3, ES6 JavaScript)</li>
+          <li>Current Cumulative GPA: <strong>3.3</strong></li>
+          <li>Active Nature Club Enrollment & Sustainable Leadership Initiative</li>
+          <li>Top Tier School Academic Honor Roll / Achievements</li>
         </ul>
       </div>
-      <div>
-        <strong>Executive Traits</strong>
-        <p style="margin-top: 10px;"></p>
-        <ul>
-          <li>Calculated Risk-Taking & Decision Making</li>
-          <li>High-Stakes Group Synergy & Teamwork</li>
-          <li>Asymmetric Time Allocation & Discipline</li>
-        </ul>
+    </section>
+
+    <section id="basketball">
+      <h2>Athletic Execution</h2>
+      <p>
+        Driven by competitive instinct and refined by relentless training. Basketball is more than a sport—it is an exercise in elite communication, split-second execution, and high-pressure strategy.
+      </p>
+      <div class="grid-container">
+        <div class="grid-box">
+          <strong>Court Leadership</strong>
+          <p>Directing on-court offensive strategies and managing tempo during high-stakes game variations.</p>
+        </div>
+        <div class="grid-box">
+          <strong>Elite Metrics</strong>
+          <p>Combining rigorous daily endurance regimes with precision multi-position spatial tracking.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="extracurriculars">
-    <h2>Innovations</h2>
-    <p>A look into self-directed deep dives where data science meets high-end product engineering.</p>
-    
-    <div class="grid-box" style="margin-bottom: 20px;">
-      <strong>CourtVision.AI (Concept)</strong>
-      <p>A speculative real-time computer vision project processing raw sports camera feeds to map out player fatigue and defensive blindspots instantly.</p>
-    </div>
+    <section id="highlights">
+      <h2>Game Highlights</h2>
+      <p>Elite-tier career accolades alongside technical physical metrics and visual logs mapping court execution.</p>
+      
+      <!-- Metrics Dashboard Component -->
+      <div class="metrics-dashboard">
+        
+        <!-- Accolades Grid Layout -->
+        <div class="achievement-grid">
+          <div class="achievement-card">
+            <span class="badge">Elite Stratum</span>
+            <div class="title">National Player</div>
+          </div>
+          <div class="achievement-card">
+            <span class="badge">ISSO League Apex</span>
+            <div class="title">1x ISSO U16 Winner</div>
+          </div>
+          <div class="achievement-card">
+            <span class="badge">State Tier Apex</span>
+            <div class="title">2x State Runner-Up</div>
+          </div>
+          <div class="achievement-card">
+            <span class="badge">ISSO Performance</span>
+            <div class="title">1x ISSO U18 2nd Runner-Up</div>
+          </div>
+          <div class="achievement-card" style="grid-column: span 2;">
+            <span class="badge">Regional Consistency</span>
+            <div class="title">2x Second Runner-Up in States</div>
+          </div>
+        </div>
+        
+        <!-- Small Vital Boxes Column -->
+        <div class="vitals-column">
+          <div class="vital-box">
+            <span class="vital-label">Height</span>
+            <span class="vital-value">195 <span style="font-size: 0.75rem; color: #64748B; font-weight: normal;">cm</span></span>
+          </div>
+          <div class="vital-box">
+            <span class="vital-label">Weight</span>
+            <span class="vital-value">79 <span style="font-size: 0.75rem; color: #64748B; font-weight: normal;">kg</span></span>
+          </div>
+          <div class="vital-box">
+            <span class="vital-label">Position</span>
+            <span class="vital-value position-text">Power Forward</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="https://via.placeholder.com/600x400" alt="Sushank on Court">
+          <div class="gallery-caption">Game Action Drop-step</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://via.placeholder.com/600x400" alt="Team Formation">
+          <div class="gallery-caption">Strategic Execution & Team Play</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://via.placeholder.com/600x400" alt="Pre-game warmups">
+          <div class="gallery-caption">Relentless Training & Conditioning</div>
+        </div>
+      </div>
+    </section>
 
-    <div class="grid-box">
-      <strong>Autonomous Portfolio Matrix</strong>
-      <p>An ultra-performance digital footprint engineered using clean structures, optimized loading protocols, and rich aesthetic typography.</p>
-    </div>
+    <section id="skills">
+      <h2>Core Disciplines</h2>
+      <div class="grid-container">
+        <div class="grid-box">
+          <strong>Computational & AI Architecture</strong>
+          <ul>
+            <li>Deep Learning & Predictive Frameworks</li>
+            <li>Advanced Systems Optimization</li>
+            <li>Modern UI/UX Design (HTML5, CSS3, ES6 JavaScript)</li>
+          </ul>
+        </div>
+        <div class="grid-box">
+          <strong>Executive Traits</strong>
+          <ul>
+            <li>Calculated Risk-Taking & Decision Making</li>
+            <li>High-Stakes Group Synergy & Teamwork</li>
+            <li>Asymmetric Time Allocation & Discipline</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <a href="#contact" class="btn">Initiate Collaboration</a>
-  </section>
+    <section id="extracurriculars">
+      <h2>Innovations</h2>
+      <p>A look into self-directed deep dives where data science meets high-end product engineering.</p>
+      
+      <div class="grid-box" style="margin-bottom: 20px;">
+        <strong>CourtVision.AI (Concept)</strong>
+        <p>A speculative real-time computer vision project processing raw sports camera feeds to map out player fatigue and defensive blindspots instantly.</p>
+      </div>
+      <div class="grid-box">
+        <strong>Autonomous Portfolio Matrix</strong>
+        <p>An ultra-performance digital footprint engineered using clean structures, optimized loading protocols, and rich aesthetic typography.</p>
+      </div>
 
-  <section id="contact">
-    <h2>Secured Communications</h2>
-    <p>Available for selective institutional tech projects, elite level scouting, or technical inquiries.</p>
-    <p style="margin-top: 20px;"><strong>Direct Mail:</strong> sushank.singh@premium-domain.com</p>
-    <p><strong>Secure Line:</strong> +91 98765 43210</p>
-    <p><strong>Geographic Base:</strong> India</p>
-  </section>
+      <div style="text-align: center;">
+        <a href="#contact" class="btn">Initiate Collaboration</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Secured Communications</h2>
+      <p>Available for selective institutional tech projects, elite level scouting, or technical inquiries.</p>
+      
+      <div class="grid-box">
+        <p><strong>Direct Mail:</strong> sushankkumar.singh@corvuss.in</p>
+        <p><strong>Secure Line:</strong> +91 95593 26054</p>
+        <p><strong>Geographic Base:</strong> India</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>© 2026 SUSHANK KUMAR SINGH. PRODUCED WITH FINEST ATTENTION TO DETAIL.</p>
   </footer>
-
-</body>
-</html>
-
-```
+</body></html>
