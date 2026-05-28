@@ -17,19 +17,19 @@
     }
 
     body {
-      background-color: #FBE4D8; /* Lightest tint from download.jpeg */
-      /* Architectural Grid Texture with subtle reference color */
+      background-color: #F9F6F0; /* Alabaster Base */
+      /* Minimalist architectural structure lines matching the palette */
       background-image: 
-        linear-gradient(rgba(133, 79, 108, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(133, 79, 108, 0.04) 1px, transparent 1px);
+        linear-gradient(rgba(197, 168, 128, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(197, 168, 128, 0.04) 1px, transparent 1px);
       background-size: 30px 30px;
-      color: #190019; /* Deep Obsidian from download.jpeg */
+      color: #1A1A1A; /* Caviar Charcoal Typography */
       line-height: 1.7;
     }
 
     /* Fixed Premium Navigation */
     nav {
-      background: rgba(251, 228, 216, 0.9); /* Translucent FBE4D8 */
+      background: rgba(249, 246, 240, 0.9); /* Translucent Alabaster */
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       padding: 20px;
@@ -37,11 +37,11 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(223, 182, 178, 0.4); /* DFB6B2 Accent */
+      border-bottom: 1px solid rgba(197, 168, 128, 0.25); /* Brushed Gold line */
     }
 
     nav a {
-      color: #522B5B; /* Deep Muted Plum from download.jpeg */
+      color: #2C2520; /* Midnight Espresso Link Color */
       text-decoration: none;
       margin: 0 15px;
       font-weight: 600;
@@ -52,7 +52,7 @@
     }
 
     nav a:hover {
-      color: #854F6C; /* Dusty Rose Hover from download.jpeg */
+      color: #C5A880; /* Brushed Gold Hover */
     }
 
     /* Premium Header / Hero Section */
@@ -66,18 +66,18 @@
       font-size: 3rem;
       font-weight: 700;
       letter-spacing: 2px;
-      color: #190019; 
+      color: #1A1A1A; /* Caviar Charcoal */
       margin-bottom: 15px;
       text-transform: uppercase;
     }
 
     header h1 span {
-      color: #854F6C; /* Dusty Rose Focal Point */
+      color: #C5A880; /* Brushed Gold Accent */
     }
 
     header p {
       font-size: 1.1rem;
-      color: #522B5B; 
+      color: #2C2520; /* Midnight Espresso secondary typography */
       letter-spacing: 4px;
       text-transform: uppercase;
       font-weight: 400;
@@ -88,7 +88,7 @@
       padding: 40px 0px;
       max-width: 1100px; 
       margin: 40px auto;
-      border-bottom: 1px solid rgba(223, 182, 178, 0.3); /* DFB6B2 Separator Line */
+      border-bottom: 1px solid rgba(197, 168, 128, 0.2); /* Elegant separator line */
     }
 
     #contact {
@@ -96,7 +96,7 @@
     }
 
     h2 {
-      color: #2B124C; /* Deep Indigo Velvet from download.jpeg */
+      color: #2C2520; /* Midnight Espresso Section Titles */
       font-size: 1.8rem;
       font-weight: 600;
       letter-spacing: 1.5px;
@@ -106,25 +106,25 @@
       position: relative;
     }
 
-    /* Palette highlight bar under headings */
+    /* Brushed Gold highlight bar under headings */
     h2::after {
       content: '';
       display: block;
       width: 40px;
       height: 3px;
-      background: #854F6C; 
+      background: #C5A880; 
       margin-top: 8px;
       border-radius: 2px;
     }
 
     p {
-      color: #2B124C; 
+      color: #1A1A1A; 
       margin-bottom: 15px;
       font-size: 1.05rem;
     }
 
     strong {
-      color: #190019; 
+      color: #1A1A1A; 
       font-weight: 600;
     }
 
@@ -141,10 +141,10 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      border: 3px solid #854F6C; 
+      border: 3px solid #C5A880; /* Brushed Gold Frame */
       overflow: hidden;
-      background-color: #FFFFFF;
-      box-shadow: 0 10px 30px rgba(43, 18, 76, 0.05);
+      background-color: #EFEAE2; /* Linen Base fill */
+      box-shadow: 0 10px 30px rgba(44, 37, 32, 0.05);
     }
 
     .profile-frame img {
@@ -163,15 +163,15 @@
     }
 
     .grid-box {
-      background: #FFFFFF; 
-      border: 1px solid rgba(223, 182, 178, 0.4); 
+      background: #EFEAE2; /* Linen secondary panel base */
+      border: 1px solid rgba(197, 168, 128, 0.3); 
       padding: 30px; 
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(43, 18, 76, 0.02); 
+      box-shadow: 0 4px 20px rgba(44, 37, 32, 0.02); 
     }
 
     .grid-box strong {
-      color: #854F6C; 
+      color: #2C2520; /* Midnight Espresso titles */
       display: block;
       margin-bottom: 8px;
     }
@@ -182,7 +182,7 @@
     }
 
     li {
-      color: #2B124C; 
+      color: #1A1A1A; 
       margin-bottom: 12px;
       position: relative;
       padding-left: 20px;
@@ -190,7 +190,7 @@
 
     li::before {
       content: "✦";
-      color: #854F6C;
+      color: #C5A880; /* Brushed Gold element marker */
       position: absolute;
       left: 0;
       top: 0;
@@ -212,9 +212,9 @@
     }
 
     .achievement-card {
-      background: #FFFFFF;
-      border: 1px solid rgba(223, 182, 178, 0.4);
-      border-left: 4px solid #522B5B; /* Accent color from download.jpeg */
+      background: #EFEAE2; /* Linen Card fill */
+      border: 1px solid rgba(197, 168, 128, 0.3);
+      border-left: 4px solid #C5A880; /* Brushed Gold anchor border */
       padding: 15px 20px;
       border-radius: 8px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
@@ -224,7 +224,7 @@
       font-size: 0.68rem;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: #854F6C;
+      color: #2C2520; /* Midnight Espresso text code */
       font-weight: 700;
       display: block;
       margin-bottom: 2px;
@@ -233,7 +233,7 @@
     .achievement-card .title {
       font-size: 1.05rem;
       font-weight: 700;
-      color: #2B124C;
+      color: #1A1A1A; /* Caviar Charcoal text labels */
       text-transform: uppercase;
       letter-spacing: 0.5px;
       line-height: 1.3;
@@ -247,8 +247,8 @@
     }
 
     .vital-box {
-      background: #FFFFFF;
-      border: 1px solid rgba(223, 182, 178, 0.3);
+      background: #EFEAE2; /* Linen Box fill */
+      border: 1px solid rgba(197, 168, 128, 0.25);
       border-radius: 8px;
       padding: 14px 20px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
@@ -261,21 +261,21 @@
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: #522B5B;
+      color: #2C2520; 
       font-weight: 600;
     }
 
     .vital-value {
       font-size: 1.25rem;
       font-weight: 700;
-      color: #190019;
+      color: #1A1A1A;
     }
 
     .vital-value.position-text {
       font-size: 0.95rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      color: #854F6C;
+      color: #C5A880; /* Highlight in Brushed Gold */
     }
 
     /* Gallery Component Layout */
@@ -287,17 +287,17 @@
     }
 
     .gallery-item {
-      background: #FFFFFF;
-      border: 1px solid rgba(223, 182, 178, 0.4);
+      background: #EFEAE2; /* Linen gallery base frame */
+      border: 1px solid rgba(197, 168, 128, 0.3);
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(43, 18, 76, 0.02);
+      box-shadow: 0 4px 20px rgba(44, 37, 32, 0.02);
       transition: transform 0.3s ease;
     }
 
     .gallery-item:hover {
       transform: translateY(-5px);
-      border-color: #522B5B; 
+      border-color: #C5A880; 
     }
 
     .gallery-item img {
@@ -310,10 +310,10 @@
     .gallery-caption {
       padding: 15px;
       font-size: 0.95rem;
-      color: #2B124C;
+      color: #1A1A1A;
       text-align: center;
-      background: #FFFFFF;
-      border-top: 1px solid rgba(223, 182, 178, 0.3);
+      background: #EFEAE2;
+      border-top: 1px solid rgba(197, 168, 128, 0.25);
     }
 
     /* Executive Call-To-Action Button */
@@ -322,8 +322,8 @@
       margin-top: 35px;
       padding: 14px 40px;
       background: transparent;
-      color: #522B5B; 
-      border: 2px solid #522B5B;
+      color: #2C2520; 
+      border: 2px solid #2C2520; /* Midnight Espresso structure outline */
       text-decoration: none;
       border-radius: 4px;
       font-weight: 600;
@@ -334,8 +334,8 @@
     }
 
     .btn:hover {
-      background: #522B5B;
-      color: #FBE4D8; 
+      background: #2C2520;
+      color: #F9F6F0; /* Flips color profile onto Alabaster ground */
       cursor: pointer;
     }
 
@@ -343,9 +343,9 @@
     footer {
       text-align: center;
       padding: 60px 20px;
-      background: #FFFFFF; 
-      color: #854F6C;
-      border-top: 1px solid rgba(223, 182, 178, 0.3);
+      background: #EFEAE2; /* Linen architectural base panel */
+      color: #2C2520;
+      border-top: 1px solid rgba(197, 168, 128, 0.25);
       font-size: 0.85rem;
       letter-spacing: 1px;
     }
@@ -420,7 +420,7 @@
         </div>
       </div>
        
-      <div class="grid-box" style="border-left: 4px solid #854F6C;">
+      <div class="grid-box" style="border-left: 4px solid #C5A880;">
         <strong>Academic Excellence & Benchmarks</strong>
         <p style="margin-top: 5px;">Maintaining rigorous discipline within high-tier academic programs:</p>
         <ul>
@@ -483,11 +483,11 @@
         <div class="vitals-column">
           <div class="vital-box">
             <span class="vital-label">Height</span>
-            <span class="vital-value">195 <span style="font-size: 0.75rem; color: #522B5B; font-weight: normal;">cm</span></span>
+            <span class="vital-value">195 <span style="font-size: 0.75rem; color: #2C2520; font-weight: normal;">cm</span></span>
           </div>
           <div class="vital-box">
             <span class="vital-label">Weight</span>
-            <span class="vital-value">79 <span style="font-size: 0.75rem; color: #522B5B; font-weight: normal;">kg</span></span>
+            <span class="vital-value">79 <span style="font-size: 0.75rem; color: #2C2520; font-weight: normal;">kg</span></span>
           </div>
           <div class="vital-box">
             <span class="vital-label">Position</span>
