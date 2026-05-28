@@ -17,19 +17,19 @@
     }
 
     body {
-      background-color: #F1F5F9; 
-      /* Subtle Architectural Grid Texture - Eye catching but minimal */
+      background-color: #FBE4D8; /* Lightest tint from download.jpeg */
+      /* Architectural Grid Texture with subtle reference color */
       background-image: 
-        linear-gradient(rgba(197, 168, 128, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(197, 168, 128, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(133, 79, 108, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(133, 79, 108, 0.04) 1px, transparent 1px);
       background-size: 30px 30px;
-      color: #0F172A; /* Midnight Slate Charcoal Typography */
+      color: #190019; /* Deep Obsidian from download.jpeg */
       line-height: 1.7;
     }
 
     /* Fixed Premium Navigation */
     nav {
-      background: rgba(241, 245, 249, 0.9); 
+      background: rgba(251, 228, 216, 0.9); /* Translucent FBE4D8 */
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       padding: 20px;
@@ -37,11 +37,11 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(197, 168, 128, 0.2); 
+      border-bottom: 1px solid rgba(223, 182, 178, 0.4); /* DFB6B2 Accent */
     }
 
     nav a {
-      color: #475569; 
+      color: #522B5B; /* Deep Muted Plum from download.jpeg */
       text-decoration: none;
       margin: 0 15px;
       font-weight: 600;
@@ -52,7 +52,7 @@
     }
 
     nav a:hover {
-      color: #C5A880; /* Muted Champagne Gold Hover */
+      color: #854F6C; /* Dusty Rose Hover from download.jpeg */
     }
 
     /* Premium Header / Hero Section */
@@ -66,29 +66,29 @@
       font-size: 3rem;
       font-weight: 700;
       letter-spacing: 2px;
-      color: #0F172A; 
+      color: #190019; 
       margin-bottom: 15px;
       text-transform: uppercase;
     }
 
     header h1 span {
-      color: #C5A880; /* Muted Champagne Gold */
+      color: #854F6C; /* Dusty Rose Focal Point */
     }
 
     header p {
       font-size: 1.1rem;
-      color: #475569; 
+      color: #522B5B; 
       letter-spacing: 4px;
       text-transform: uppercase;
       font-weight: 400;
     }
 
-    /* Stretched Luxury Content Sections (No Background Fills) */
+    /* Stretched Luxury Content Sections */
     section {
       padding: 40px 0px;
-      max-width: 1100px; /* Stretched wide layout for strong emphasis */
+      max-width: 1100px; 
       margin: 40px auto;
-      border-bottom: 1px solid rgba(197, 168, 128, 0.15); /* Elegant separator line */
+      border-bottom: 1px solid rgba(223, 182, 178, 0.3); /* DFB6B2 Separator Line */
     }
 
     #contact {
@@ -96,7 +96,7 @@
     }
 
     h2 {
-      color: #0F172A; 
+      color: #2B124C; /* Deep Indigo Velvet from download.jpeg */
       font-size: 1.8rem;
       font-weight: 600;
       letter-spacing: 1.5px;
@@ -106,25 +106,25 @@
       position: relative;
     }
 
-    /* Champagne highlight bar under headings */
+    /* Palette highlight bar under headings */
     h2::after {
       content: '';
       display: block;
       width: 40px;
       height: 3px;
-      background: #C5A880; 
+      background: #854F6C; 
       margin-top: 8px;
       border-radius: 2px;
     }
 
     p {
-      color: #334155; 
+      color: #2B124C; 
       margin-bottom: 15px;
       font-size: 1.05rem;
     }
 
     strong {
-      color: #0F172A; 
+      color: #190019; 
       font-weight: 600;
     }
 
@@ -141,10 +141,10 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      border: 3px solid #C5A880; 
+      border: 3px solid #854F6C; 
       overflow: hidden;
       background-color: #FFFFFF;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 10px 30px rgba(43, 18, 76, 0.05);
     }
 
     .profile-frame img {
@@ -154,7 +154,7 @@
       display: block;
     }
 
-    /* Custom Inner Grid Layout (Stretched Layout) */
+    /* Custom Inner Grid Layout */
     .grid-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -163,15 +163,15 @@
     }
 
     .grid-box {
-      background: #FFFFFF; /* Stretched data panels */
-      border: 1px solid rgba(197, 168, 128, 0.2); 
+      background: #FFFFFF; 
+      border: 1px solid rgba(223, 182, 178, 0.4); 
       padding: 30px; 
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02); 
+      box-shadow: 0 4px 20px rgba(43, 18, 76, 0.02); 
     }
 
     .grid-box strong {
-      color: #C5A880; 
+      color: #854F6C; 
       display: block;
       margin-bottom: 8px;
     }
@@ -182,7 +182,7 @@
     }
 
     li {
-      color: #334155; 
+      color: #2B124C; 
       margin-bottom: 12px;
       position: relative;
       padding-left: 20px;
@@ -190,7 +190,7 @@
 
     li::before {
       content: "✦";
-      color: #C5A880;
+      color: #854F6C;
       position: absolute;
       left: 0;
       top: 0;
@@ -213,8 +213,8 @@
 
     .achievement-card {
       background: #FFFFFF;
-      border: 1px solid rgba(197, 168, 128, 0.2);
-      border-left: 4px solid #C5A880;
+      border: 1px solid rgba(223, 182, 178, 0.4);
+      border-left: 4px solid #522B5B; /* Accent color from download.jpeg */
       padding: 15px 20px;
       border-radius: 8px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
@@ -224,7 +224,7 @@
       font-size: 0.68rem;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: #64748B;
+      color: #854F6C;
       font-weight: 700;
       display: block;
       margin-bottom: 2px;
@@ -233,7 +233,7 @@
     .achievement-card .title {
       font-size: 1.05rem;
       font-weight: 700;
-      color: #0F172A;
+      color: #2B124C;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       line-height: 1.3;
@@ -248,7 +248,7 @@
 
     .vital-box {
       background: #FFFFFF;
-      border: 1px solid rgba(197, 168, 128, 0.15);
+      border: 1px solid rgba(223, 182, 178, 0.3);
       border-radius: 8px;
       padding: 14px 20px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
@@ -261,21 +261,21 @@
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: #64748B;
+      color: #522B5B;
       font-weight: 600;
     }
 
     .vital-value {
       font-size: 1.25rem;
       font-weight: 700;
-      color: #0F172A;
+      color: #190019;
     }
 
     .vital-value.position-text {
       font-size: 0.95rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      color: #C5A880;
+      color: #854F6C;
     }
 
     /* Gallery Component Layout */
@@ -288,16 +288,16 @@
 
     .gallery-item {
       background: #FFFFFF;
-      border: 1px solid rgba(197, 168, 128, 0.2);
+      border: 1px solid rgba(223, 182, 178, 0.4);
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+      box-shadow: 0 4px 20px rgba(43, 18, 76, 0.02);
       transition: transform 0.3s ease;
     }
 
     .gallery-item:hover {
       transform: translateY(-5px);
-      border-color: #C5A880; 
+      border-color: #522B5B; 
     }
 
     .gallery-item img {
@@ -310,10 +310,10 @@
     .gallery-caption {
       padding: 15px;
       font-size: 0.95rem;
-      color: #0F172A;
+      color: #2B124C;
       text-align: center;
       background: #FFFFFF;
-      border-top: 1px solid rgba(197, 168, 128, 0.15);
+      border-top: 1px solid rgba(223, 182, 178, 0.3);
     }
 
     /* Executive Call-To-Action Button */
@@ -322,8 +322,8 @@
       margin-top: 35px;
       padding: 14px 40px;
       background: transparent;
-      color: #C5A880; 
-      border: 2px solid #C5A880;
+      color: #522B5B; 
+      border: 2px solid #522B5B;
       text-decoration: none;
       border-radius: 4px;
       font-weight: 600;
@@ -334,8 +334,8 @@
     }
 
     .btn:hover {
-      background: #C5A880;
-      color: #FFFFFF; 
+      background: #522B5B;
+      color: #FBE4D8; 
       cursor: pointer;
     }
 
@@ -344,8 +344,8 @@
       text-align: center;
       padding: 60px 20px;
       background: #FFFFFF; 
-      color: #64748B;
-      border-top: 1px solid rgba(197, 168, 128, 0.15);
+      color: #854F6C;
+      border-top: 1px solid rgba(223, 182, 178, 0.3);
       font-size: 0.85rem;
       letter-spacing: 1px;
     }
@@ -420,7 +420,7 @@
         </div>
       </div>
        
-      <div class="grid-box" style="border-left: 4px solid #C5A880;">
+      <div class="grid-box" style="border-left: 4px solid #854F6C;">
         <strong>Academic Excellence & Benchmarks</strong>
         <p style="margin-top: 5px;">Maintaining rigorous discipline within high-tier academic programs:</p>
         <ul>
@@ -483,11 +483,11 @@
         <div class="vitals-column">
           <div class="vital-box">
             <span class="vital-label">Height</span>
-            <span class="vital-value">195 <span style="font-size: 0.75rem; color: #64748B; font-weight: normal;">cm</span></span>
+            <span class="vital-value">195 <span style="font-size: 0.75rem; color: #522B5B; font-weight: normal;">cm</span></span>
           </div>
           <div class="vital-box">
             <span class="vital-label">Weight</span>
-            <span class="vital-value">79 <span style="font-size: 0.75rem; color: #64748B; font-weight: normal;">kg</span></span>
+            <span class="vital-value">79 <span style="font-size: 0.75rem; color: #522B5B; font-weight: normal;">kg</span></span>
           </div>
           <div class="vital-box">
             <span class="vital-label">Position</span>
