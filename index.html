@@ -1,111 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sushank Kumar Singh | Executive Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishith Basuray | Portfolio</title>
+    <style>
+        /* Base Variables & Reset */
+        :root {
+            --primary: #1e3a8a; /* Deep Navy Blue */
+            --secondary: #f59e0b; /* Basketball Orange/Gold Accent */
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --border-radius: 8px;
+        }
 
-  <style>
-    /* Reset and Core Variables */
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
 
-    :root {
-      --bg-dark: #0B0F19;
-      --bg-card: rgba(255, 255, 255, 0.03);
-      --border-glow: rgba(212, 175, 55, 0.2);
-      --gold-primary: #D4AF37;
-      --gold-hover: #F3E5AB;
-      --text-main: #F5F5F7;
-      --text-muted: #A0A5B5;
-    }
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
 
-    html {
-      scroll-behavior: smooth;
-    }
+        /* Navigation Bar */
+        header {
+            background-color: #ffffff;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
 
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      line-height: 1.7;
-      background-image: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 20% 80%, rgba(0, 119, 204, 0.05) 0%, transparent 50%);
-    }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
 
-    /* Premium Header / Hero Section */
-    header {
-      padding: 100px 20px 60px 20px;
-      text-align: center;
-      position: relative;
-    }
+        .logo {
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
 
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      color: #fff;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
 
-    header h1 span {
-      color: var(--gold-primary);
-    }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-    header p {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      font-weight: 300;
-    }
+        .nav-links a:hover {
+            color: var(--primary);
+        }
 
-    /* Fixed Premium Navigation */
-    nav {
-      background: rgba(11, 15, 25, 0.85);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding: 20px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid var(--border-glow);
-    }
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
 
-    nav a {
-      color: var(--text-main);
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-    }
+        /* Layout Framework */
+        section {
+            padding: 5rem 2rem 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    nav a:hover {
-      color: var(--gold-primary);
-      text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
-    }
+        h2 {
+            font-size: 2.25rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--secondary);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
 
-    /* Luxury Content Sections */
-    section {
-      padding: 50px 40px;
-      max-width: 950px;
-      margin: 40px auto;
-      background: var(--bg-card);
-      border: 1px solid var(--border-glow);
-      border-radius: 16px;
-      backdrop-filter: blur(5px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
 
-    h2 {
-      color: var(--gold-primary);
-      font-size: 1.8rem;
-      font-
+        .card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #111827;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Hero Section */
+        #home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+            min-height: 90vh;
+            padding-top: 7rem;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-text h1 em {
+            color: var(--secondary);
+            font-style: normal;
+        }
+
+        .hero-text h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-img img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid var(--primary);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Basketball Gallery (1 Big + 4 Small Layout) */
+        .sports-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .gallery-main {
+            grid-column: span 4;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .gallery-main img {
+            height: 300px;
+        }
+
+        .gallery-thumb img {
+            height: 80px;
+        }
+
+        /* Basketball Stats & Profile Vitals */
+        .vitals {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .vital-box {
+            background: #ffffff;
+            padding: 1rem;
+            text-align: center;
+            border-radius: var(--border-radius);
+            flex: 1;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary);
+        }
+
+        /* Skills Layout */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            #home {
+                flex-direction: column-reverse;
+                text-align: center;
+                justify-content: center;
+                gap: 2rem;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .sports-container {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none; /* Simplification for code representation */
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#home" class="logo">Rishith Basuray</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#academics">Academics</a></li>
+                <li><a href="#sports">Basketball</a></li>
+                <li><a href="#extracurriculars">Extracurriculars</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero-text">
+            <h3>Portfolio</h3>
+            <h1>Rishith <em>Basuray</em></h1>
+            <h3>Aspiring Economist | Basketball Enthusiast</h3>
+            <p>Balancing academics and sports with discipline.</p>
+            <div class="hero-buttons">
+                <a href="#academics" class="btn">Explore Profile</a>
+                <a href="#about" class="btn btn-outline">About Me</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-img">
+            <img src="profile.jpg.jpeg" alt="Rishith Basuray">
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>Hi, I'm Rishith Basuray, a Grade 11 student with a passion for Economics, Mathematics, and Basketball. I thrive on balancing academics and sports, believing that discipline and hard work are the keys to success. As a Point Guard and Team Captain, I've led my team to multiple victories, learning the value of teamwork, leadership, and resilience. Off the court, I enjoy diving into economic theories, solving mathematical problems, and exploring new technologies. My goal is to pursue a career in Economics while continuing to grow as an athlete and a leader.</p>
+        </div>
+    </section>
+
+    <section id="academics">
+        <h2>Academic Profile</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>GPA & Standing</h3>
+                <p>Vice Captain of School, maintaining a GPA of <strong>3.65/4.0</strong> in Grade 11.</p>
+            </div>
+            <div class="card">
+                <h3>Favorite Subjects</h3>
+                <p>Economics, Statistics, Calculus</p>
+            </div>
+            <div class="card">
+                <h3>IELTS Score</h3>
+                <p>Achieved an IELTS score of <strong>Band 8</strong>, demonstrating strong English communication and academic language skills.</p>
+                <a href="IELTS test score.pdf" class="btn btn-outline" target="_blank">View IELTS TRF →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sports">
+        <h2>Basketball</h2>
+        <div class="sports-container">
+            <div class="gallery">
+                <div class="gallery-main">
+                    <a href="basketball1.jpg.jpeg" target="_blank"><img src="basketball1.jpg.jpeg" alt="Rishith with Basketball Trophy"></a>
+                </div>
+                <div class="gallery-thumb"><a href="basketball2jpg.jpeg" target="_blank"><img src="basketball2jpg.jpeg" alt="Basketball Photo 2"></a></div>
+                <div class="gallery-thumb"><a href="basketball3jpg.jpeg" target="_blank"><img src="basketball3jpg.jpeg" alt="Basketball Photo 3"></a></div>
+                <div class="gallery-thumb"><a href="basketball4jpg.jpeg" target="_blank"><img src="basketball4jpg.jpeg" alt="Basketball Photo 4"></a></div>
+                <div class="gallery-thumb"><a href="basketball5jpg.jpeg" target="_blank"><img src="basketball5jpg.jpeg" alt="Basketball Photo 5"></a></div>
+            </div>
+            
+            <div>
+                <p>As a <strong>Point Guard and Team Captain</strong>, I’ve led my team to multiple victories, combining leadership, strategy, and athletic skill. Basketball has taught me discipline, teamwork, and resilience.</p>
+                <br>
+                <ul>
+                    <li><strong>2x State Championship Winner</strong></li>
+                    <li><strong>Highest Scorer in State Championship</strong></li>
+                    <li><strong>MVP in ISSO India U17 Championship</strong></li>
+                    <li><strong>Averaged 16 PPG</strong> in the U16 National Basketball Championship in 2025</li>
+                    <li><strong>Represented State multiple times in National Championship</strong></li>
+                </ul>
+
+                <div class="vitals">
+                    <div class="vital-box"><h4>Height</h4><p>184 cm</p></div>
+                    <div class="vital-box"><h4>Weight</h4><p>76 kg</p></div>
+                    <div class="vital-box"><h4>Position</h4><p>Point Guard</p></div>
+                </div>
+
+                <div class="hero-buttons" style="margin-top: 1.5rem;">
+                    <a href="https://drive.google.com/drive/folders/1LBYugmSXaQcG9Z29s7NufthQAaGEheEK?usp=drive_link" class="btn" target="_blank">Watch Highlights</a>
+                    <a href="https://drive.google.com/drive/folders/1mp8-RzSaXDEcM7pRqZmefhPEs1gES807?usp=drive_link" class="btn btn-outline" target="_blank">View Certificates</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="extracurriculars">
+        <h2>Extracurriculars</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Vice Captain of School</h3>
+                <p>Serving as Vice Captain, helping organize school events, student activities, and leadership initiatives.</p>
+            </div>
+            <div class="card">
+                <h3>School Nature Club</h3>
+                <p>Part of the School Nature Club, contributing to sustainability initiatives aligned with the UN SDGs.</p>
+            </div>
+            <div class="card">
+                <h3>Model United Nations</h3>
+                <p>Participated in MUN, developing public speaking, diplomacy, research, and debate skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Gender Discrimination Field Study</h3>
+                <p>Field study on gender discrimination in India, focusing on school life, sports environments, and equal opportunities through surveys and interviews.</p>
+                <p><strong>Tools:</strong> Survey Research, Interviews, Data Analysis</p>
+                <a href="Gender Discrimination Field Study Project.pdf" class="btn" target="_blank">Read Field Study →</a>
+            </div>
+            <div class="card">
+                <h3>Upcoming Economic Analysis Report</h3>
+                <p>Upcoming research project analyzing inflation trends in India using historical economic data and statistics.</p>
+                <p><strong>Tools:</strong> Excel, Python, Pandas</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills & Certifications</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Core Skills</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Analytical Thinking</span>
+                    <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Teamwork</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Excel</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Certificates</h3>
+                <p><strong>Microsoft Excel</strong> - Coursera (2026)<br><a href="https://coursera.org/share/010e09f5763d9e8d8e80d1a9c7abd5c0" target="_blank">View Certificate</a></p>
+                <br>
+                <p><strong>Python Data Structures</strong> - Coursera (2026)<br><a href="https://coursera.org/share/ff07c23df26ba3b7902e33ca5147e9e8" target="_blank">View Certificate</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="card">
+            <p><strong>Email:</strong> <a href="mailto:rishithbasuray@gmail.com">rishithbasuray@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:9986576516">+91 99865 76516</a></p>
+            <p><strong>Location:</strong> Bangalore, Karnataka</p>
+            <p><strong>Social:</strong> <a href="https://www.linkedin.com/in/rishith-basuray-b3bb37391/" target="_blank">LinkedIn Profile</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Rishith Basuray</strong> &copy; All Rights Reserved</p>
+        <p>Grade 11 &middot; Economics &middot; Basketball</p>
+    </footer>
+
+</body>
+</html>
