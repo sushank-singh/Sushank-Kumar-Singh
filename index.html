@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sushank Kumar Singh | Executive Portfolio</title>
+
+  <style>
+    /* Reset and Core Variables */
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    :root {
+      --bg-dark: #0B0F19;
+      --bg-card: rgba(255, 255, 255, 0.03);
+      --border-glow: rgba(212, 175, 55, 0.2);
+      --gold-primary: #D4AF37;
+      --gold-hover: #F3E5AB;
+      --text-main: #F5F5F7;
+      --text-muted: #A0A5B5;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.7;
+      background-image: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 20% 80%, rgba(0, 119, 204, 0.05) 0%, transparent 50%);
+    }
+
+    /* Premium Header / Hero Section */
+    header {
+      padding: 100px 20px 60px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #fff;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    header h1 span {
+      color: var(--gold-primary);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+
+    /* Fixed Premium Navigation */
+    nav {
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--border-glow);
+    }
+
+    nav a {
+      color: var(--text-main);
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--gold-primary);
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Luxury Content Sections */
+    section {
+      padding: 50px 40px;
+      max-width: 950px;
+      margin: 40px auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border-glow);
+      border-radius: 16px;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      color: var(--gold-primary);
+      font-size: 1.8rem;
+      font-
