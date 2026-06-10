@@ -17,19 +17,18 @@
     }
 
     body {
-      background-color: #F9F6F0; /* Alabaster Base */
-      /* Minimalist architectural structure lines matching the palette */
+      background-color: #F0F3F7; /* Sleek Platinum Base */
       background-image: 
-        linear-gradient(rgba(197, 168, 128, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(197, 168, 128, 0.04) 1px, transparent 1px);
+        linear-gradient(rgba(15, 17, 26, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 17, 26, 0.02) 1px, transparent 1px);
       background-size: 30px 30px;
-      color: #1A1A1A; /* Caviar Charcoal Typography */
+      color: #0F172A; /* Slate Charcoal Typography */
       line-height: 1.7;
     }
 
     /* Fixed Premium Navigation */
     nav {
-      background: rgba(249, 246, 240, 0.9); /* Translucent Alabaster */
+      background: rgba(240, 243, 247, 0.9); /* Translucent Platinum */
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       padding: 20px;
@@ -37,11 +36,11 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(197, 168, 128, 0.25); /* Brushed Gold line */
+      border-bottom: 1px solid rgba(162, 180, 199, 0.3); /* Frosted Steel line */
     }
 
     nav a {
-      color: #2C2520; /* Midnight Espresso Link Color */
+      color: #0F172A; /* Slate Charcoal Link */
       text-decoration: none;
       margin: 0 15px;
       font-weight: 600;
@@ -51,33 +50,37 @@
       transition: all 0.3s ease;
     }
 
-    nav a:hover {
-      color: #C5A880; /* Brushed Gold Hover */
-    }
+   nav a:hover {
+  color: #E11D48;
+  text-shadow: 0 0 15px rgba(225, 29, 72, 0.8);
+  transform: translateY(-2px);
+}
 
     /* Premium Header / Hero Section */
     header {
       padding: 120px 20px 60px 20px;
       text-align: center;
       position: relative;
+      background: #0F111A; /* Deep Eclipse Blue-Carbon */
+      color: #F1F5F9; /* Liquid Frost */
     }
 
     header h1 {
       font-size: 3rem;
       font-weight: 700;
       letter-spacing: 2px;
-      color: #1A1A1A; /* Caviar Charcoal */
+      color: #F1F5F9;
       margin-bottom: 15px;
       text-transform: uppercase;
     }
 
     header h1 span {
-      color: #C5A880; /* Brushed Gold Accent */
+      color: #E11D48; /* Crimson Velocity Accent */
     }
 
     header p {
       font-size: 1.1rem;
-      color: #2C2520; /* Midnight Espresso secondary typography */
+      color: #A2B4C7; /* Frosted Steel secondary typography */
       letter-spacing: 4px;
       text-transform: uppercase;
       font-weight: 400;
@@ -85,18 +88,39 @@
 
     /* Stretched Luxury Content Sections */
     section {
-      padding: 40px 0px;
+      padding: 60px 40px;
       max-width: 1100px; 
       margin: 40px auto;
-      border-bottom: 1px solid rgba(197, 168, 128, 0.2); /* Elegant separator line */
+      border-radius: 16px;
     }
 
-    #contact {
-      border-bottom: none;
+    /* Unique Theme Coloring per Section Block */
+    .light-section {
+      background: #F0F3F7;
+      color: #0F172A;
+    }
+
+    .dark-section {
+      background: #0F111A; /* Deep Eclipse Blue-Carbon Block */
+      color: #F1F5F9; /* Liquid Frost Typography */
+    }
+
+    /* Headings Custom Rules */
+    .light-section h2 {
+      color: #0F172A; 
+    }
+    .light-section h2::after {
+      background: #E11D48; /* Crimson Velocity Accent Line */
+    }
+
+    .dark-section h2 {
+      color: #F1F5F9; 
+    }
+    .dark-section h2::after {
+      background: #A2B4C7; /* Frosted Steel Accent Line */
     }
 
     h2 {
-      color: #2C2520; /* Midnight Espresso Section Titles */
       font-size: 1.8rem;
       font-weight: 600;
       letter-spacing: 1.5px;
@@ -106,27 +130,22 @@
       position: relative;
     }
 
-    /* Brushed Gold highlight bar under headings */
     h2::after {
       content: '';
       display: block;
       width: 40px;
       height: 3px;
-      background: #C5A880; 
       margin-top: 8px;
       border-radius: 2px;
     }
 
     p {
-      color: #1A1A1A; 
       margin-bottom: 15px;
       font-size: 1.05rem;
     }
 
-    strong {
-      color: #1A1A1A; 
-      font-weight: 600;
-    }
+    .light-section strong { color: #0F172A; }
+    .dark-section strong { color: #E11D48; } /* Highlight strong text with Crimson Velocity in dark zones */
 
     /* Profile Layout */
     .profile-container {
@@ -141,10 +160,10 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      border: 3px solid #C5A880; /* Brushed Gold Frame */
+      border: 3px solid #E11D48; /* Crimson Velocity Frame */
       overflow: hidden;
-      background-color: #EFEAE2; /* Linen Base fill */
-      box-shadow: 0 10px 30px rgba(44, 37, 32, 0.05);
+      background-color: #0F111A;
+      box-shadow: 0 10px 30px rgba(15, 17, 26, 0.15);
     }
 
     .profile-frame img {
@@ -160,21 +179,32 @@
       grid-template-columns: 1fr 1fr;
       gap: 30px;
       margin-top: 20px;
+      margin-bottom: 30px;
     }
 
     .grid-box {
-      background: #EFEAE2; /* Linen secondary panel base */
-      border: 1px solid rgba(197, 168, 128, 0.3); 
       padding: 30px; 
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(44, 37, 32, 0.02); 
+      box-shadow: 0 4px 20px rgba(15, 17, 26, 0.04); 
+    }
+
+    .light-section .grid-box {
+      background: #FFFFFF;
+      border: 1px solid rgba(15, 17, 26, 0.08);
+    }
+
+    .dark-section .grid-box {
+      background: rgba(241, 245, 249, 0.05); /* Transparent Frost fill */
+      border: 1px solid rgba(162, 180, 199, 0.2); /* Frosted Steel Frame edge */
     }
 
     .grid-box strong {
-      color: #2C2520; /* Midnight Espresso titles */
       display: block;
       margin-bottom: 8px;
     }
+
+    .light-section .grid-box strong { color: #0F172A; }
+    .dark-section .grid-box strong { color: #A2B4C7; } /* Frosted Steel Subtitles */
 
     /* Sleek Bulleted Lists */
     ul {
@@ -182,15 +212,22 @@
     }
 
     li {
-      color: #1A1A1A; 
       margin-bottom: 12px;
       position: relative;
       padding-left: 20px;
     }
 
-    li::before {
+    .light-section li::before {
       content: "✦";
-      color: #C5A880; /* Brushed Gold element marker */
+      color: #E11D48; /* Crimson Velocity List Marker */
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .dark-section li::before {
+      content: "✦";
+      color: #A2B4C7; /* Frosted Steel List Marker */
       position: absolute;
       left: 0;
       top: 0;
@@ -212,9 +249,9 @@
     }
 
     .achievement-card {
-      background: #EFEAE2; /* Linen Card fill */
-      border: 1px solid rgba(197, 168, 128, 0.3);
-      border-left: 4px solid #C5A880; /* Brushed Gold anchor border */
+      background: #FFFFFF; 
+      border: 1px solid rgba(15, 17, 26, 0.08);
+      border-left: 4px solid #E11D48; /* Crimson Velocity structural line */
       padding: 15px 20px;
       border-radius: 8px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
@@ -224,7 +261,7 @@
       font-size: 0.68rem;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: #2C2520; /* Midnight Espresso text code */
+      color: #E11D48; /* Crimson Highlight tags */
       font-weight: 700;
       display: block;
       margin-bottom: 2px;
@@ -233,7 +270,7 @@
     .achievement-card .title {
       font-size: 1.05rem;
       font-weight: 700;
-      color: #1A1A1A; /* Caviar Charcoal text labels */
+      color: #0F172A; 
       text-transform: uppercase;
       letter-spacing: 0.5px;
       line-height: 1.3;
@@ -247,8 +284,8 @@
     }
 
     .vital-box {
-      background: #EFEAE2; /* Linen Box fill */
-      border: 1px solid rgba(197, 168, 128, 0.25);
+      background: #FFFFFF; 
+      border: 1px solid rgba(15, 17, 26, 0.08);
       border-radius: 8px;
       padding: 14px 20px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
@@ -261,21 +298,21 @@
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: #2C2520; 
+      color: #0F172A; 
       font-weight: 600;
     }
 
     .vital-value {
       font-size: 1.25rem;
       font-weight: 700;
-      color: #1A1A1A;
+      color: #E11D48; /* Highlighting vital text numbers with Crimson */
     }
 
     .vital-value.position-text {
       font-size: 0.95rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      color: #C5A880; /* Highlight in Brushed Gold */
+      color: #0F172A; 
     }
 
     /* Gallery Component Layout */
@@ -284,20 +321,21 @@
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
       gap: 25px;
       margin-top: 25px;
+      margin-bottom: 25px;
     }
 
     .gallery-item {
-      background: #EFEAE2; /* Linen gallery base frame */
-      border: 1px solid rgba(197, 168, 128, 0.3);
+      background: #FFFFFF; 
+      border: 1px solid rgba(15, 17, 26, 0.08);
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(44, 37, 32, 0.02);
-      transition: transform 0.3s ease;
+      box-shadow: 0 4px 20px rgba(15, 17, 26, 0.02);
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
     .gallery-item:hover {
       transform: translateY(-5px);
-      border-color: #C5A880; 
+      border-color: #E11D48; 
     }
 
     .gallery-item img {
@@ -310,20 +348,17 @@
     .gallery-caption {
       padding: 15px;
       font-size: 0.95rem;
-      color: #1A1A1A;
+      color: #0F172A;
       text-align: center;
-      background: #EFEAE2;
-      border-top: 1px solid rgba(197, 168, 128, 0.25);
+      background: #FFFFFF;
+      border-top: 1px solid rgba(15, 17, 26, 0.08);
     }
 
-    /* Executive Call-To-Action Button */
+    /* Executive Call-To-Action Buttons */
     .btn {
       display: inline-block;
-      margin-top: 35px;
       padding: 14px 40px;
       background: transparent;
-      color: #2C2520; 
-      border: 2px solid #2C2520; /* Midnight Espresso structure outline */
       text-decoration: none;
       border-radius: 4px;
       font-weight: 600;
@@ -333,9 +368,29 @@
       transition: all 0.4s ease;
     }
 
-    .btn:hover {
-      background: #2C2520;
-      color: #F9F6F0; /* Flips color profile onto Alabaster ground */
+    /* Light Theme Button Accent */
+    .light-section .btn-accent {
+      margin-top: 20px;
+      color: #E11D48;
+      border: 2px solid #E11D48;
+    }
+
+    .light-section .btn-accent:hover {
+      background: #E11D48;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    /* Dark Theme Button Accent */
+    .dark-section .btn-outline {
+      margin-top: 35px;
+      color: #A2B4C7; /* Frosted Steel */
+      border: 2px solid #A2B4C7; 
+    }
+
+    .dark-section .btn-outline:hover {
+      background: #A2B4C7;
+      color: #0F111A; /* Invert over Carbon Ground */
       cursor: pointer;
     }
 
@@ -343,9 +398,9 @@
     footer {
       text-align: center;
       padding: 60px 20px;
-      background: #EFEAE2; /* Linen architectural base panel */
-      color: #2C2520;
-      border-top: 1px solid rgba(197, 168, 128, 0.25);
+      background: #0F111A; 
+      color: #F1F5F9;
+      border-top: 1px solid rgba(162, 180, 199, 0.2);
       font-size: 0.85rem;
       letter-spacing: 1px;
     }
@@ -384,7 +439,7 @@
         margin: 12px 0;
       }
       section {
-        padding: 30px 0px;
+        padding: 40px 20px;
       }
     }
   </style></head><body>
@@ -395,47 +450,46 @@
   </header>
 
   <nav aria-label="Main Navigation">
-    <a href="#about">Philosophy</a>
-    <a href="#basketball">Athletics</a>
+    <a href="#about">About Me</a>
     <a href="#highlights">Game Highlights</a>
     <a href="#skills">Excellence</a>
-    <a href="#extracurriculars">Innovations</a>
+    <a href="#extracurriculars">Activities</a>
     <a href="#contact">Connect</a>
   </nav>
 
   <main>
-    <section id="about">
-      <h2>The Philosophy</h2>
+    <section id="about" class="light-section">
+      <h2>About Me</h2>
       <div class="profile-container">
         <div class="profile-frame">
           <img src="https://via.placeholder.com/180" alt="Sushank Kumar Singh Profile Image">
         </div>
         <div class="profile-text">
           <p>
-            True masterclass demands precision both on the court and inside the terminal. As a student-athlete focusing on <strong>Computer Science and Artificial Intelligence</strong>, I approach building neural networks with the same tactical mindset required to break down an opponent's defense.
+            Operating at the intersection of academics, technology, and elite physical competition, I am a <strong>student-athlete</strong> who is passionate about learning and growth. As a school student with a strong interest in Computer Science and Artificial Intelligence, I enjoy exploring how technology can solve real-world problems while continuing to develop my skills both in the classroom and on the basketball court.
           </p>
           <p>
-            My vision is to bridge the physical intuition of competitive basketball with high-compute intelligence, building cutting-edge web environments and machine learning frameworks.
+            My daily routine balances studying, improving my understanding of AI and programming, and training in basketball. The discipline, teamwork, and quick decision-making required in the game help shape the way I approach learning and problem-solving. Basketball has taught me resilience, focus, and strategic thinking — qualities that also help me build better projects, learn faster, and stay motivated to keep improving in the field of technology.
           </p>
         </div>
       </div>
        
-      <div class="grid-box" style="border-left: 4px solid #C5A880;">
+      <div class="grid-box" style="border-left: 4px solid #E11D48;">
         <strong>Academic Excellence & Benchmarks</strong>
         <p style="margin-top: 5px;">Maintaining rigorous discipline within high-tier academic programs:</p>
         <ul>
           <li>Current Cumulative GPA: <strong>3.3</strong></li>
-          <li>Active Nature Club Enrollment & Sustainable Leadership Initiative</li>
           <li>Top Tier School Academic Honor Roll / Achievements</li>
         </ul>
       </div>
     </section>
 
-    <section id="basketball">
-      <h2>Athletic Execution</h2>
+    <section id="highlights" class="light-section" style="border-top: 1px solid rgba(15, 17, 26, 0.05);">
+      <h2>Game Highlights</h2>
       <p>
-        Driven by competitive instinct and refined by relentless training. Basketball is more than a sport—it is an exercise in elite communication, split-second execution, and high-pressure strategy.
+        Driven by competitive instinct and refined by relentless training. Basketball is more than a sport—it is an exercise in elite communication, split-second execution, and high-pressure strategy. Elite-tier career accolades alongside technical physical metrics and visual logs mapping court execution.
       </p>
+
       <div class="grid-container">
         <div class="grid-box">
           <strong>Court Leadership</strong>
@@ -446,16 +500,8 @@
           <p>Combining rigorous daily endurance regimes with precision multi-position spatial tracking.</p>
         </div>
       </div>
-    </section>
-
-    <section id="highlights">
-      <h2>Game Highlights</h2>
-      <p>Elite-tier career accolades alongside technical physical metrics and visual logs mapping court execution.</p>
       
-      <!-- Metrics Dashboard Component -->
       <div class="metrics-dashboard">
-        
-        <!-- Accolades Grid Layout -->
         <div class="achievement-grid">
           <div class="achievement-card">
             <span class="badge">Elite Stratum</span>
@@ -479,15 +525,14 @@
           </div>
         </div>
         
-        <!-- Small Vital Boxes Column -->
         <div class="vitals-column">
           <div class="vital-box">
             <span class="vital-label">Height</span>
-            <span class="vital-value">195 <span style="font-size: 0.75rem; color: #2C2520; font-weight: normal;">cm</span></span>
+            <span class="vital-value">195 <span style="font-size: 0.75rem; color: #0F172A; font-weight: normal;">cm</span></span>
           </div>
           <div class="vital-box">
             <span class="vital-label">Weight</span>
-            <span class="vital-value">79 <span style="font-size: 0.75rem; color: #2C2520; font-weight: normal;">kg</span></span>
+            <span class="vital-value">79 <span style="font-size: 0.75rem; color: #0F172A; font-weight: normal;">kg</span></span>
           </div>
           <div class="vital-box">
             <span class="vital-label">Position</span>
@@ -498,21 +543,25 @@
       
       <div class="gallery-container">
         <div class="gallery-item">
-          <img src="https://via.placeholder.com/600x400" alt="Sushank on Court">
+          <img src="https://via.placeholder.com/600x400" alt="Game Action Drop-step">
           <div class="gallery-caption">Game Action Drop-step</div>
         </div>
         <div class="gallery-item">
-          <img src="https://via.placeholder.com/600x400" alt="Team Formation">
+          <img src="https://via.placeholder.com/600x400" alt="Strategic Team Play">
           <div class="gallery-caption">Strategic Execution & Team Play</div>
         </div>
         <div class="gallery-item">
-          <img src="https://via.placeholder.com/600x400" alt="Pre-game warmups">
+          <img src="https://via.placeholder.com/600x400" alt="Conditioning">
           <div class="gallery-caption">Relentless Training & Conditioning</div>
         </div>
       </div>
+
+      <div style="text-align: center;">
+        <a href="https://youtube.com" target="_blank" class="btn btn-accent">Watch Reel & Highlights</a>
+      </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="dark-section">
       <h2>Core Disciplines</h2>
       <div class="grid-container">
         <div class="grid-box">
@@ -534,29 +583,44 @@
       </div>
     </section>
 
-    <section id="extracurriculars">
-      <h2>Innovations</h2>
-      <p>A look into self-directed deep dives where data science meets high-end product engineering.</p>
+    <section id="extracurriculars" class="dark-section" style="border-top: 1px solid rgba(241, 245, 249, 0.1);">
+      <h2>Extracurricular Engagement</h2>
+      <p>A diverse record of cultural celebration, active leadership, and technical or academic tournament execution.</p>
       
-      <div class="grid-box" style="margin-bottom: 20px;">
-        <strong>CourtVision.AI (Concept)</strong>
-        <p>A speculative real-time computer vision project processing raw sports camera feeds to map out player fatigue and defensive blindspots instantly.</p>
-      </div>
-      <div class="grid-box">
-        <strong>Autonomous Portfolio Matrix</strong>
-        <p>An ultra-performance digital footprint engineered using clean structures, optimized loading protocols, and rich aesthetic typography.</p>
+      <div class="grid-container">
+        <div class="grid-box">
+          <strong>Academic Tournaments & Science</strong>
+          <ul>
+            <li>Science Olympiad</li>
+            <li>Maths Olympiad</li>
+            <li>Pokhran Model Showcase</li>
+            <li>Quiz Competition</li>
+            <li>Debate Competition</li>
+          </ul>
+        </div>
+        
+        <div class="grid-box">
+          <strong>Leadership, Culture & Community</strong>
+          <ul>
+            <li>Nature Club Participation</li>
+            <li>Amphitheatre Performance Execution</li>
+            <li>Hindi Day & Hindi Poster Exhibition</li>
+            <li>World Tourism Day Initiatives</li>
+            <li>Garba, Christmas Day, Festivals and Celebrations</li>
+          </ul>
+        </div>
       </div>
 
       <div style="text-align: center;">
-        <a href="#contact" class="btn">Initiate Collaboration</a>
+        <a href="#contact" class="btn btn-outline">Initiate Collaboration</a>
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="light-section">
       <h2>Secured Communications</h2>
       <p>Available for selective institutional tech projects, elite level scouting, or technical inquiries.</p>
       
-      <div class="grid-box">
+      <div class="grid-box" style="border-left: 4px solid #E11D48;">
         <p><strong>Direct Mail:</strong> sushankkumar.singh@corvuss.in</p>
         <p><strong>Secure Line:</strong> +91 95593 26054</p>
         <p><strong>Geographic Base:</strong> India</p>
