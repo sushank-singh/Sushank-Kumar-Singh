@@ -1,11 +1,13 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sushank Kumar Singh | Executive Portfolio</title>
 
   <style>
     /* Reset and Core Layout */
-    *{
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -17,18 +19,18 @@
     }
 
     body {
-      background-color: #F0F3F7; /* Sleek Platinum Base */
+      background-color: #FAFAF7; /* Warm White */
       background-image: 
-        linear-gradient(rgba(15, 17, 26, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(15, 17, 26, 0.02) 1px, transparent 1px);
+        linear-gradient(rgba(34, 34, 34, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 34, 34, 0.015) 1px, transparent 1px);
       background-size: 30px 30px;
-      color: #0F172A; /* Slate Charcoal Typography */
+      color: #222222; /* Charcoal Text */
       line-height: 1.7;
     }
 
     /* Fixed Premium Navigation */
     nav {
-      background: rgba(240, 243, 247, 0.9); /* Translucent Platinum */
+      background: rgba(250, 250, 247, 0.9); /* Translucent Warm White */
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       padding: 20px;
@@ -36,11 +38,11 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(162, 180, 199, 0.3); /* Frosted Steel line */
+      border-bottom: 1px solid rgba(107, 114, 128, 0.2); /* Stone Gray alpha line */
     }
 
     nav a {
-      color: #0F172A; /* Slate Charcoal Link */
+      color: #222222; /* Charcoal */
       text-decoration: none;
       margin: 0 15px;
       font-weight: 600;
@@ -48,45 +50,46 @@
       font-size: 0.9rem;
       text-transform: uppercase;
       transition: all 0.3s ease;
+      display: inline-block;
     }
 
-   nav a:hover {
-  color: #E11D48;
-  text-shadow: 0 0 15px rgba(225, 29, 72, 0.8);
-  transform: translateY(-2px);
-}
+    nav a:hover {
+      color: #F59E0B; /* Gold Hover */
+      text-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+      transform: translateY(-2px);
+    }
 
     /* Premium Header / Hero Section */
     header {
       padding: 120px 20px 60px 20px;
       text-align: center;
       position: relative;
-      background: #0F111A; /* Deep Eclipse Blue-Carbon */
-      color: #F1F5F9; /* Liquid Frost */
+      background: linear-gradient(135deg, #FAFAF7, #FFFFFF, rgba(217, 119, 6, 0.08)); /* Gradient to Subtle Accent tint */
+      color: #222222;
     }
 
     header h1 {
       font-size: 3rem;
       font-weight: 700;
       letter-spacing: 2px;
-      color: #F1F5F9;
+      color: #222222; /* Charcoal */
       margin-bottom: 15px;
       text-transform: uppercase;
     }
 
     header h1 span {
-      color: #E11D48; /* Crimson Velocity Accent */
+      color: #D97706; /* Burnt Orange Accent */
     }
 
     header p {
       font-size: 1.1rem;
-      color: #A2B4C7; /* Frosted Steel secondary typography */
+      color: #6B7280; /* Stone Gray Secondary */
       letter-spacing: 4px;
       text-transform: uppercase;
       font-weight: 400;
     }
 
-    /* Stretched Luxury Content Sections */
+    /* Luxury Content Sections */
     section {
       padding: 60px 40px;
       max-width: 1100px; 
@@ -94,30 +97,16 @@
       border-radius: 16px;
     }
 
-    /* Unique Theme Coloring per Section Block */
+    /* Section Variations matching palette rules */
     .light-section {
-      background: #F0F3F7;
-      color: #0F172A;
+      background: #FAFAF7; /* Warm White */
+      color: #222222;
     }
 
     .dark-section {
-      background: #0F111A; /* Deep Eclipse Blue-Carbon Block */
-      color: #F1F5F9; /* Liquid Frost Typography */
-    }
-
-    /* Headings Custom Rules */
-    .light-section h2 {
-      color: #0F172A; 
-    }
-    .light-section h2::after {
-      background: #E11D48; /* Crimson Velocity Accent Line */
-    }
-
-    .dark-section h2 {
-      color: #F1F5F9; 
-    }
-    .dark-section h2::after {
-      background: #A2B4C7; /* Frosted Steel Accent Line */
+      background: #FFFFFF; /* Shifted variant container to clean White */
+      color: #222222;
+      border: 1px solid rgba(107, 114, 128, 0.1);
     }
 
     h2 {
@@ -128,6 +117,7 @@
       text-transform: uppercase;
       display: inline-block;
       position: relative;
+      color: #222222;
     }
 
     h2::after {
@@ -137,6 +127,11 @@
       height: 3px;
       margin-top: 8px;
       border-radius: 2px;
+      background: #D97706; /* Burnt Orange Accent Line */
+    }
+
+    .dark-section h2::after {
+      background: #6B7280; /* Stone Gray Line for secondary sectioning */
     }
 
     p {
@@ -144,8 +139,13 @@
       font-size: 1.05rem;
     }
 
-    .light-section strong { color: #0F172A; }
-    .dark-section strong { color: #E11D48; } /* Highlight strong text with Crimson Velocity in dark zones */
+    strong { 
+      color: #222222; 
+    }
+    
+    .dark-section strong { 
+      color: #D97706; /* Burnt Orange highlights inside structural blocks */
+    }
 
     /* Profile Layout */
     .profile-container {
@@ -160,10 +160,10 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      border: 3px solid #E11D48; /* Crimson Velocity Frame */
+      border: 3px solid #D97706; /* Burnt Orange Border */
       overflow: hidden;
-      background-color: #0F111A;
-      box-shadow: 0 10px 30px rgba(15, 17, 26, 0.15);
+      background-color: #FAFAF7;
+      box-shadow: 0 10px 30px rgba(34, 34, 34, 0.08);
     }
 
     .profile-frame img {
@@ -185,26 +185,20 @@
     .grid-box {
       padding: 30px; 
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(15, 17, 26, 0.04); 
-    }
-
-    .light-section .grid-box {
-      background: #FFFFFF;
-      border: 1px solid rgba(15, 17, 26, 0.08);
-    }
-
-    .dark-section .grid-box {
-      background: rgba(241, 245, 249, 0.05); /* Transparent Frost fill */
-      border: 1px solid rgba(162, 180, 199, 0.2); /* Frosted Steel Frame edge */
+      background: #FFFFFF; /* Pure White Cards */
+      border: 1px solid rgba(107, 114, 128, 0.15); /* Soft Stone Gray outline */
+      box-shadow: 0 4px 20px rgba(34, 34, 34, 0.02); 
     }
 
     .grid-box strong {
       display: block;
       margin-bottom: 8px;
+      color: #222222;
     }
 
-    .light-section .grid-box strong { color: #0F172A; }
-    .dark-section .grid-box strong { color: #A2B4C7; } /* Frosted Steel Subtitles */
+    .dark-section .grid-box strong {
+      color: #6B7280; /* Stone Gray Subtitles */
+    }
 
     /* Sleek Bulleted Lists */
     ul {
@@ -217,9 +211,9 @@
       padding-left: 20px;
     }
 
-    .light-section li::before {
+    li::before {
       content: "✦";
-      color: #E11D48; /* Crimson Velocity List Marker */
+      color: #D97706; /* Burnt Orange List Marker */
       position: absolute;
       left: 0;
       top: 0;
@@ -227,10 +221,7 @@
 
     .dark-section li::before {
       content: "✦";
-      color: #A2B4C7; /* Frosted Steel List Marker */
-      position: absolute;
-      left: 0;
-      top: 0;
+      color: #6B7280; /* Stone Gray List Marker */
     }
 
     /* Dashboard Metrics Wrapper */
@@ -249,9 +240,9 @@
     }
 
     .achievement-card {
-      background: #FFFFFF; 
-      border: 1px solid rgba(15, 17, 26, 0.08);
-      border-left: 4px solid #E11D48; /* Crimson Velocity structural line */
+      background: #FFFFFF; /* White Card */
+      border: 1px solid rgba(107, 114, 128, 0.15);
+      border-left: 4px solid #D97706; /* Burnt Orange structural line */
       padding: 15px 20px;
       border-radius: 8px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
@@ -261,7 +252,7 @@
       font-size: 0.68rem;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: #E11D48; /* Crimson Highlight tags */
+      color: #6B7280; /* Stone Gray Secondary labels */
       font-weight: 700;
       display: block;
       margin-bottom: 2px;
@@ -270,7 +261,7 @@
     .achievement-card .title {
       font-size: 1.05rem;
       font-weight: 700;
-      color: #0F172A; 
+      color: #222222; /* Charcoal Title */
       text-transform: uppercase;
       letter-spacing: 0.5px;
       line-height: 1.3;
@@ -284,8 +275,8 @@
     }
 
     .vital-box {
-      background: #FFFFFF; 
-      border: 1px solid rgba(15, 17, 26, 0.08);
+      background: #FFFFFF; /* White Card */
+      border: 1px solid rgba(107, 114, 128, 0.15);
       border-radius: 8px;
       padding: 14px 20px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
@@ -298,21 +289,21 @@
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: #0F172A; 
+      color: #6B7280; /* Stone Gray Label */
       font-weight: 600;
     }
 
     .vital-value {
       font-size: 1.25rem;
       font-weight: 700;
-      color: #E11D48; /* Highlighting vital text numbers with Crimson */
+      color: #D97706; /* Burnt Orange Highlight numbers */
     }
 
     .vital-value.position-text {
       font-size: 0.95rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      color: #0F172A; 
+      color: #222222; 
     }
 
     /* Gallery Component Layout */
@@ -325,17 +316,17 @@
     }
 
     .gallery-item {
-      background: #FFFFFF; 
-      border: 1px solid rgba(15, 17, 26, 0.08);
+      background: #FFFFFF; /* White Card */
+      border: 1px solid rgba(107, 114, 128, 0.15);
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(15, 17, 26, 0.02);
+      box-shadow: 0 4px 20px rgba(34, 34, 34, 0.02);
       transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
     .gallery-item:hover {
       transform: translateY(-5px);
-      border-color: #E11D48; 
+      border-color: #F59E0B; /* Gold Hover Highlight border */
     }
 
     .gallery-item img {
@@ -348,10 +339,10 @@
     .gallery-caption {
       padding: 15px;
       font-size: 0.95rem;
-      color: #0F172A;
+      color: #222222;
       text-align: center;
       background: #FFFFFF;
-      border-top: 1px solid rgba(15, 17, 26, 0.08);
+      border-top: 1px solid rgba(107, 114, 128, 0.15);
     }
 
     /* Executive Call-To-Action Buttons */
@@ -368,29 +359,28 @@
       transition: all 0.4s ease;
     }
 
-    /* Light Theme Button Accent */
-    .light-section .btn-accent {
+    .btn-accent {
       margin-top: 20px;
-      color: #E11D48;
-      border: 2px solid #E11D48;
+      color: #D97706; /* Burnt Orange outline */
+      border: 2px solid #D97706;
     }
 
-    .light-section .btn-accent:hover {
-      background: #E11D48;
+    .btn-accent:hover {
+      background: #F59E0B; /* Gold Hover Fill */
+      border-color: #F59E0B;
       color: #FFFFFF;
       cursor: pointer;
     }
 
-    /* Dark Theme Button Accent */
-    .dark-section .btn-outline {
+    .btn-outline {
       margin-top: 35px;
-      color: #A2B4C7; /* Frosted Steel */
-      border: 2px solid #A2B4C7; 
+      color: #6B7280; /* Stone Gray outline */
+      border: 2px solid #6B7280; 
     }
 
-    .dark-section .btn-outline:hover {
-      background: #A2B4C7;
-      color: #0F111A; /* Invert over Carbon Ground */
+    .btn-outline:hover {
+      background: #6B7280;
+      color: #FFFFFF;
       cursor: pointer;
     }
 
@@ -398,9 +388,8 @@
     footer {
       text-align: center;
       padding: 60px 20px;
-      background: #0F111A; 
-      color: #F1F5F9;
-      border-top: 1px solid rgba(162, 180, 199, 0.2);
+      background: #222222; /* Solid Charcoal base footer */
+      color: #FAFAF7; /* Warm White textual print */
       font-size: 0.85rem;
       letter-spacing: 1px;
     }
@@ -442,7 +431,9 @@
         padding: 40px 20px;
       }
     }
-  </style></head><body>
+  </style>
+</head>
+<body>
 
   <header>
     <h1>Sushank Kumar <span>Singh</span></h1>
@@ -473,8 +464,8 @@
           </p>
         </div>
       </div>
-       
-      <div class="grid-box" style="border-left: 4px solid #E11D48;">
+        
+      <div class="grid-box" style="border-left: 4px solid #D97706;">
         <strong>Academic Excellence & Benchmarks</strong>
         <p style="margin-top: 5px;">Maintaining rigorous discipline within high-tier academic programs:</p>
         <ul>
@@ -484,7 +475,7 @@
       </div>
     </section>
 
-    <section id="highlights" class="light-section" style="border-top: 1px solid rgba(15, 17, 26, 0.05);">
+    <section id="highlights" class="light-section" style="border-top: 1px solid rgba(107, 114, 128, 0.15);">
       <h2>Game Highlights</h2>
       <p>
         Driven by competitive instinct and refined by relentless training. Basketball is more than a sport—it is an exercise in elite communication, split-second execution, and high-pressure strategy. Elite-tier career accolades alongside technical physical metrics and visual logs mapping court execution.
@@ -528,11 +519,11 @@
         <div class="vitals-column">
           <div class="vital-box">
             <span class="vital-label">Height</span>
-            <span class="vital-value">195 <span style="font-size: 0.75rem; color: #0F172A; font-weight: normal;">cm</span></span>
+            <span class="vital-value">195 <span style="font-size: 0.75rem; color: #222222; font-weight: normal;">cm</span></span>
           </div>
           <div class="vital-box">
             <span class="vital-label">Weight</span>
-            <span class="vital-value">79 <span style="font-size: 0.75rem; color: #0F172A; font-weight: normal;">kg</span></span>
+            <span class="vital-value">79 <span style="font-size: 0.75rem; color: #222222; font-weight: normal;">kg</span></span>
           </div>
           <div class="vital-box">
             <span class="vital-label">Position</span>
@@ -583,7 +574,7 @@
       </div>
     </section>
 
-    <section id="extracurriculars" class="dark-section" style="border-top: 1px solid rgba(241, 245, 249, 0.1);">
+    <section id="extracurriculars" class="dark-section" style="border-top: 1px solid rgba(107, 114, 128, 0.15);">
       <h2>Extracurricular Engagement</h2>
       <p>A diverse record of cultural celebration, active leadership, and technical or academic tournament execution.</p>
       
@@ -620,7 +611,7 @@
       <h2>Secured Communications</h2>
       <p>Available for selective institutional tech projects, elite level scouting, or technical inquiries.</p>
       
-      <div class="grid-box" style="border-left: 4px solid #E11D48;">
+      <div class="grid-box" style="border-left: 4px solid #D97706;">
         <p><strong>Direct Mail:</strong> sushankkumar.singh@corvuss.in</p>
         <p><strong>Secure Line:</strong> +91 95593 26054</p>
         <p><strong>Geographic Base:</strong> India</p>
@@ -631,4 +622,5 @@
   <footer>
     <p>© 2026 SUSHANK KUMAR SINGH. PRODUCED WITH FINEST ATTENTION TO DETAIL.</p>
   </footer>
-</body></html>
+</body>
+</html>
