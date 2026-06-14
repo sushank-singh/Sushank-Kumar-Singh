@@ -19,18 +19,18 @@
     }
 
     body {
-      background-color: #0F172A; /* Midnight Blue */
+      background-color: #11120D; /* Smoky Black Base */
       background-image: 
-        linear-gradient(rgba(248, 250, 252, 0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(248, 250, 252, 0.015) 1px, transparent 1px);
-      background-size: 30px 30px;
-      color: #F8FAFC; /* Ice White */
+        linear-gradient(rgba(216, 207, 188, 0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(216, 207, 188, 0.01) 1px, transparent 1px);
+      background-size: 40px 40px;
+      color: #FFFBF4; /* Floral White primary body text */
       line-height: 1.7;
     }
 
     /* Fixed Premium Navigation */
     nav {
-      background: rgba(15, 23, 42, 0.9); /* Translucent Midnight Blue */
+      background: rgba(17, 18, 13, 0.9); /* Translucent Smoky Black */
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       padding: 20px;
@@ -38,113 +38,119 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(148, 163, 184, 0.15); /* Stone Gray alpha line */
+      border-bottom: 1px solid rgba(216, 207, 188, 0.1);
     }
 
     nav a {
-      color: #F8FAFC; /* Ice White */
+      color: #D8CFBC; /* Bone for passive nav links */
       text-decoration: none;
       margin: 0 15px;
       font-weight: 600;
-      letter-spacing: 1px;
-      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      font-size: 0.85rem;
       text-transform: uppercase;
       transition: all 0.3s ease;
       display: inline-block;
     }
 
     nav a:hover {
-      color: #F59E0B; /* Gold Accent Hover State */
-      text-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
-      transform: translateY(-2px);
+      color: #FFFBF4; /* Floral White Hover state */
+      letter-spacing: 2.5px;
     }
 
     /* Premium Header / Hero Section */
     header {
-      padding: 120px 20px 60px 20px;
+      padding: 140px 20px 80px 20px;
       text-align: center;
       position: relative;
-      background: linear-gradient(135deg, #0F172A, #1E293B, rgba(37, 99, 235, 0.05)); /* Subtle Blue Accent shift */
-      color: #F8FAFC;
+      background: linear-gradient(180deg, #1A1C14 0%, #11120D 100%); /* Depth shade */
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       font-weight: 700;
-      letter-spacing: 2px;
-      color: #F8FAFC; /* Ice White */
+      letter-spacing: 3px;
+      color: #FFFBF4; /* Floral White Title */
       margin-bottom: 15px;
       text-transform: uppercase;
     }
 
     header h1 span {
-      color: #2563EB; /* Blue Accent structural branding */
+      color: #D8CFBC; /* Bone Accent core branding */
     }
 
     header p {
-      font-size: 1.1rem;
-      color: #94A3B8; /* Stone Gray Secondary Text */
-      letter-spacing: 4px;
+      font-size: 1rem;
+      color: #565449; /* Olive Drab secondary description text */
+      letter-spacing: 5px;
       text-transform: uppercase;
-      font-weight: 400;
+      font-weight: 500;
     }
 
-    /* Luxury Content Sections */
+    /* Alternating Luxury Content Sections with Dark Typeface */
     section {
-      padding: 60px 40px;
+      padding: 70px 50px;
       max-width: 1100px; 
-      margin: 40px auto;
-      border-radius: 16px;
-      background: #1E293B; /* Dark Slate Cards Container background */
-      border: 1px solid rgba(148, 163, 184, 0.1);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      margin: 60px auto;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Alternate Design Assignments */
+    /* Sections 1, 3, 5 get Bone Background */
+    #about, #skills, #contact {
+      background: #D8CFBC; /* Bone Theme */
+      color: #11120D; /* Black Text */
+    }
+
+    /* Sections 2, 4 get Olive Drab Background */
+    #highlights, #extracurriculars {
+      background: #565449; /* Olive Drab Theme */
+      color: #11120D; /* Black Text */
     }
 
     h2 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      margin-bottom: 25px;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 35px;
       text-transform: uppercase;
       display: inline-block;
       position: relative;
-      color: #F8FAFC;
+      color: #11120D; /* Consistent deep black titles */
     }
 
-    /* Dedicated section anchor color mapping */
-    #about h2::after { content: ''; display: block; width: 40px; height: 3px; margin-top: 8px; border-radius: 2px; background: #F59E0B; }          /* Gold Accent */
-    #highlights h2::after { content: ''; display: block; width: 40px; height: 3px; margin-top: 8px; border-radius: 2px; background: #EA580C; }     /* Orange Accent */
-    #skills h2::after { content: ''; display: block; width: 40px; height: 3px; margin-top: 8px; border-radius: 2px; background: #2563EB; }         /* Blue Accent */
-    #extracurriculars h2::after { content: ''; display: block; width: 40px; height: 3px; margin-top: 8px; border-radius: 2px; background: #10B981; } /* Green Accent */
-    #contact h2::after { content: ''; display: block; width: 40px; height: 3px; margin-top: 8px; border-radius: 2px; background: #9333EA; }       /* Purple Accent */
+    h2::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      margin-top: 10px;
+      background: #11120D;
+      border-radius: 2px;
+    }
 
     p {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       font-size: 1.05rem;
-      color: #F8FAFC;
     }
 
+    /* Inherited styles for secondary paragraph blocks inside themes */
     .secondary-text {
-      color: #94A3B8; /* Stone Gray structural print */
+      opacity: 0.85;
     }
 
     strong { 
-      color: #F8FAFC; 
+      color: #11120D;
+      font-weight: 700;
     }
 
-    /* Purpose-aligned inline structural accents */
-    #about strong { color: #F59E0B; }
-    #highlights strong { color: #EA580C; }
-    #skills strong { color: #2563EB; }
-    #extracurriculars strong { color: #10B981; }
-    #contact strong { color: #9333EA; }
-
-    /* Profile Layout */
+    /* Profile Layout Customization */
     .profile-container {
       display: flex;
       align-items: center;
       gap: 40px;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     .profile-frame {
@@ -152,10 +158,10 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      border: 3px solid #F59E0B; /* About: Gold Accent */
+      border: 4px solid #11120D;
       overflow: hidden;
-      background-color: #1E293B;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      background-color: #11120D;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     }
 
     .profile-frame img {
@@ -165,29 +171,40 @@
       display: block;
     }
 
-    /* Custom Inner Grid Layout */
+    /* Nested Inner Grid Boxes - Shaded with Smoky Black variants */
     .grid-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 30px;
-      margin-top: 20px;
+      margin-top: 30px;
       margin-bottom: 30px;
     }
 
     .grid-box {
       padding: 30px; 
-      border-radius: 12px;
-      background: #0F172A; /* Midnight Blue nested inners */
-      border: 1px solid rgba(148, 163, 184, 0.15);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+      border-radius: 14px;
+      background: #1A1C14; /* Shadow-shifting shade of Smoky Black */
+      border: 1px solid rgba(255, 251, 244, 0.05);
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.05), 0 8px 20px rgba(0, 0, 0, 0.3); 
     }
 
+    /* Ensure clarity inside dark nested grids */
+    .grid-box p, .grid-box li, .grid-box .secondary-text {
+      color: #FFFBF4 !important;
+    }
     .grid-box strong {
-      display: block;
-      margin-bottom: 8px;
+      color: #D8CFBC !important;
     }
 
-    /* Sleek Bulleted Lists */
+    .grid-box strong.panel-header {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Sleek Custom Bulleted Lists */
     ul {
       list-style-type: none;
     }
@@ -195,22 +212,28 @@
     li {
       margin-bottom: 12px;
       position: relative;
-      padding-left: 20px;
-      color: #F8FAFC;
+      padding-left: 25px;
     }
 
-    /* Purpose contextual list vectors */
-    #about li::before { content: "✦"; color: #F59E0B; position: absolute; left: 0; top: 0; }
-    #highlights li::before { content: "✦"; color: #EA580C; position: absolute; left: 0; top: 0; }
-    #skills li::before { content: "✦"; color: #2563EB; position: absolute; left: 0; top: 0; }
-    #extracurriculars li::before { content: "✦"; color: #10B981; position: absolute; left: 0; top: 0; }
+    li::before { 
+      content: "▪"; 
+      color: #565449; 
+      position: absolute; 
+      left: 5px; 
+      top: -1px;
+      font-size: 1.1rem;
+    }
+    
+    #highlights li::before, #extracurriculars li::before {
+      color: #D8CFBC; /* Complementary bullet flip across backgrounds */
+    }
 
     /* Dashboard Metrics Wrapper */
     .metrics-dashboard {
       display: grid;
       grid-template-columns: 1.8fr 1.2fr;
       gap: 25px;
-      margin: 25px 0 35px 0;
+      margin: 35px 0;
     }
 
     /* Achievement Grid Layout */
@@ -221,27 +244,27 @@
     }
 
     .achievement-card {
-      background: #0F172A; /* Midnight Blue */
-      border: 1px solid rgba(148, 163, 184, 0.15);
-      border-left: 4px solid #EA580C; /* Basketball: Orange Accent structural bar */
-      padding: 15px 20px;
-      border-radius: 8px;
+      background: #1A1C14; 
+      border: 1px solid rgba(255, 251, 244, 0.05);
+      border-left: 4px solid #D8CFBC;
+      padding: 18px 20px;
+      border-radius: 10px;
     }
 
     .achievement-card .badge {
-      font-size: 0.68rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: #94A3B8; /* Stone Gray Labels */
+      color: #565449;
       font-weight: 700;
       display: block;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
 
     .achievement-card .title {
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 700;
-      color: #F8FAFC; /* Ice White Title */
+      color: #FFFBF4;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       line-height: 1.3;
@@ -255,10 +278,10 @@
     }
 
     .vital-box {
-      background: #0F172A; /* Midnight Blue */
-      border: 1px solid rgba(148, 163, 184, 0.15);
-      border-radius: 8px;
-      padding: 14px 20px;
+      background: #1A1C14;
+      border: 1px solid rgba(255, 251, 244, 0.05);
+      border-radius: 10px;
+      padding: 16px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -268,43 +291,41 @@
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: #94A3B8; /* Stone Gray Label */
+      color: #D8CFBC;
       font-weight: 600;
     }
 
     .vital-value {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 700;
-      color: #EA580C; /* Basketball: Orange Accent performance data */
+      color: #FFFBF4;
     }
 
     .vital-value.position-text {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      color: #F8FAFC; 
     }
 
     /* Gallery Component Layout */
     .gallery-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
       gap: 25px;
-      margin-top: 25px;
-      margin-bottom: 25px;
+      margin: 35px 0;
     }
 
     .gallery-item {
-      background: #0F172A; /* Midnight Blue */
-      border: 1px solid rgba(148, 163, 184, 0.15);
-      border-radius: 12px;
+      background: #1A1C14;
+      border: 1px solid rgba(255, 251, 244, 0.05);
+      border-radius: 14px;
       overflow: hidden;
-      transition: transform 0.3s ease, border-color 0.3s ease;
+      transition: transform 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
 
     .gallery-item:hover {
       transform: translateY(-5px);
-      border-color: #EA580C; /* Basketball: Orange Accent frame on hover */
     }
 
     .gallery-item img {
@@ -316,62 +337,64 @@
 
     .gallery-caption {
       padding: 15px;
-      font-size: 0.95rem;
-      color: #F8FAFC;
+      font-size: 0.9rem;
+      color: #D8CFBC;
       text-align: center;
-      background: #0F172A;
-      border-top: 1px solid rgba(148, 163, 184, 0.15);
+      background: #1A1C14;
+      border-top: 1px solid rgba(255, 251, 244, 0.03);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-    /* Executive Call-To-Action Buttons */
+    /* Premium Industrial Buttons */
     .btn {
       display: inline-block;
-      padding: 14px 40px;
-      background: transparent;
+      padding: 14px 45px;
+      background: #11120D;
+      color: #FFFBF4;
       text-decoration: none;
-      border-radius: 4px;
+      border-radius: 6px;
       font-weight: 600;
       letter-spacing: 2px;
       text-transform: uppercase;
-      font-size: 0.85rem;
-      transition: all 0.4s ease;
+      font-size: 0.8rem;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
-    .btn-basketball {
-      margin-top: 20px;
-      color: #EA580C; /* Orange Accent interactive boundaries */
-      border: 2px solid #EA580C;
-    }
-
-    .btn-basketball:hover {
-      background: #EA580C; 
-      color: #FFFFFF;
+    .btn:hover {
+      background: transparent;
+      color: #11120D;
+      border-color: #11120D;
       cursor: pointer;
-      box-shadow: 0 0 15px rgba(234, 88, 12, 0.4);
     }
 
-    .btn-activities {
+    /* Specific Alignment for buttons offset inside dynamic rows */
+    .btn-wrap {
+      text-align: center;
       margin-top: 35px;
-      color: #10B981; /* Green Accent interactive boundaries */
-      border: 2px solid #10B981; 
     }
 
-    .btn-activities:hover {
-      background: #10B981;
-      color: #FFFFFF;
-      cursor: pointer;
-      box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+    /* Contact details typographic adjustment */
+    .contact-item {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+    .contact-item:last-child {
+      margin-bottom: 0;
     }
 
     /* Footer Layout */
     footer {
       text-align: center;
       padding: 60px 20px;
-      background: #0F172A; /* Midnight Blue base */
-      color: #94A3B8; /* Stone Gray secondary text footprint */
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      border-top: 1px solid rgba(148, 163, 184, 0.1);
+      background: #11120D;
+      color: #565449; /* Deep Olive Drab text foot */
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      border-top: 1px solid rgba(216, 207, 188, 0.05);
     }
 
     /* Responsive Design Optimization */
@@ -392,7 +415,7 @@
       .profile-container {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
+        gap: 25px;
       }
       .grid-container {
         grid-template-columns: 1fr;
@@ -401,14 +424,14 @@
         grid-template-columns: 1fr;
       }
       header h1 {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
       }
       nav a {
         display: block;
-        margin: 12px 0;
+        margin: 14px 0;
       }
       section {
-        padding: 40px 20px;
+        padding: 40px 25px;
       }
     }
   </style>
@@ -445,10 +468,10 @@
         </div>
       </div>
         
-      <div class="grid-box" style="border-left: 4px solid #F59E0B;">
-        <strong style="color: #F59E0B;">Academic Excellence & Benchmarks</strong>
-        <p class="secondary-text" style="margin-top: 5px;">Maintaining rigorous discipline within high-tier academic programs:</p>
-        <ul>
+      <div class="grid-box">
+        <strong class="panel-header">Academic Excellence & Benchmarks</strong>
+        <p class="secondary-text">Maintaining rigorous discipline within high-tier academic programs:</p>
+        <ul style="margin-top: 10px;">
           <li>Current Cumulative GPA: <strong>3.3</strong></li>
           <li>Top Tier School Academic Honor Roll / Achievements</li>
         </ul>
@@ -463,11 +486,11 @@
 
       <div class="grid-container">
         <div class="grid-box">
-          <strong style="color: #EA580C;">Court Leadership</strong>
+          <strong class="panel-header">Court Leadership</strong>
           <p class="secondary-text">Directing on-court offensive strategies and managing tempo during high-stakes game variations.</p>
         </div>
         <div class="grid-box">
-          <strong style="color: #EA580C;">Elite Metrics</strong>
+          <strong class="panel-header">Elite Metrics</strong>
           <p class="secondary-text">Combining rigorous daily endurance regimes with precision multi-position spatial tracking.</p>
         </div>
       </div>
@@ -499,11 +522,11 @@
         <div class="vitals-column">
           <div class="vital-box">
             <span class="vital-label">Height</span>
-            <span class="vital-value">195 <span style="font-size: 0.75rem; color: #94A3B8; font-weight: normal;">cm</span></span>
+            <span class="vital-value">195 <span style="font-size: 0.75rem; color: #565449; font-weight: normal;">cm</span></span>
           </div>
           <div class="vital-box">
             <span class="vital-label">Weight</span>
-            <span class="vital-value">79 <span style="font-size: 0.75rem; color: #94A3B8; font-weight: normal;">kg</span></span>
+            <span class="vital-value">79 <span style="font-size: 0.75rem; color: #565449; font-weight: normal;">kg</span></span>
           </div>
           <div class="vital-box">
             <span class="vital-label">Position</span>
@@ -527,24 +550,24 @@
         </div>
       </div>
 
-      <div style="text-align: center;">
-        <a href="https://youtube.com" target="_blank" class="btn btn-basketball">Watch Reel & Highlights</a>
+      <div class="btn-wrap">
+        <a href="#contact" class="btn">Watch Reel & Highlights</a>
       </div>
     </section>
 
     <section id="skills">
       <h2>Core Disciplines</h2>
       <div class="grid-container">
-        <div class="grid-box" style="border-top: 3px solid #2563EB;">
-          <strong style="color: #2563EB;">Computational & AI Architecture</strong>
+        <div class="grid-box">
+          <strong class="panel-header">Computational & AI Architecture</strong>
           <ul>
             <li>Deep Learning & Predictive Frameworks</li>
             <li>Advanced Systems Optimization</li>
             <li>Modern UI/UX Design (HTML5, CSS3, ES6 JavaScript)</li>
           </ul>
         </div>
-        <div class="grid-box" style="border-top: 3px solid #2563EB;">
-          <strong style="color: #2563EB;">Executive Traits</strong>
+        <div class="grid-box">
+          <strong class="panel-header">Executive Traits</strong>
           <ul>
             <li>Calculated Risk-Taking & Decision Making</li>
             <li>High-Stakes Group Synergy & Teamwork</li>
@@ -560,7 +583,7 @@
       
       <div class="grid-container">
         <div class="grid-box">
-          <strong style="color: #10B981;">Academic Tournaments & Science</strong>
+          <strong class="panel-header">Academic Tournaments & Science</strong>
           <ul>
             <li>Science Olympiad</li>
             <li>Maths Olympiad</li>
@@ -571,7 +594,7 @@
         </div>
         
         <div class="grid-box">
-          <strong style="color: #10B981;">Leadership, Culture & Community</strong>
+          <strong class="panel-header">Leadership, Culture & Community</strong>
           <ul>
             <li>Nature Club Participation</li>
             <li>Amphitheatre Performance Execution</li>
@@ -582,8 +605,8 @@
         </div>
       </div>
 
-      <div style="text-align: center;">
-        <a href="#contact" class="btn btn-activities">Initiate Collaboration</a>
+      <div class="btn-wrap">
+        <a href="#contact" class="btn">Initiate Collaboration</a>
       </div>
     </section>
 
@@ -591,10 +614,10 @@
       <h2>Secured Communications</h2>
       <p class="secondary-text">Available for selective institutional tech projects, elite level scouting, or technical inquiries.</p>
       
-      <div class="grid-box" style="border-left: 4px solid #9333EA;">
-        <p><strong>Direct Mail:</strong> <span style="color: #9333EA;">sushankkumar.singh@corvuss.in</span></p>
-        <p><strong>Secure Line:</strong> <span style="color: #9333EA;">+91 95593 26054</span></p>
-        <p><strong>Geographic Base:</strong> India</p>
+      <div class="grid-box" style="margin-top: 25px;">
+        <p class="contact-item"><strong>Direct Mail:</strong> sushankkumar.singh@corvuss.in</p>
+        <p class="contact-item"><strong>Secure Line:</strong> +91 95593 26054</p>
+        <p class="contact-item"><strong>Geographic Base:</strong> India</p>
       </div>
     </section>
   </main>
